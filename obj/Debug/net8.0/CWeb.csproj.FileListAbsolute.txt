@@ -250,3 +250,12 @@ F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\runtimes\win\lib
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\CWeb.csproj.AssemblyReference.cache
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\CWeb.csproj.CopyComplete
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.JSInterop.dll
