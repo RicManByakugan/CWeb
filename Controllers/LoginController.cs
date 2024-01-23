@@ -13,7 +13,7 @@ namespace CWeb.Controllers
             }
             else
             {
-                return new RedirectResult("/Admin");
+                return new RedirectResult("/Accueil");
             }
         }
     }

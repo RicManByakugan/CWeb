@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace CWeb.Controllers
 {
-    public class AdminController : Controller
+    public class AccueilController : Controller
     {
         public IActionResult Index()
         {
