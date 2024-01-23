@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<Patient>
+
+<h1>Accueil Patient</h1>
+
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelItem => item.Ticket)
+    <br />
+}

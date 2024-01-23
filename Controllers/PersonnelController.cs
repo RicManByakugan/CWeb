@@ -4,12 +4,11 @@ using System.Diagnostics;
 
 namespace CWeb.Controllers
 {
-    public class AccueilController : Controller
+    public class PersonnelController : Controller
     {
         public IActionResult Index()
         {
-            return View();
-            /*var user = HttpContext.Session.GetString("_user");
+            var user = HttpContext.Session.GetString("_user");
             if (user == null)
             {
                 return new RedirectResult("/Login");
@@ -17,7 +16,7 @@ namespace CWeb.Controllers
             else
             {
                 return View();
-            }*/
+            }
         }
 
     }

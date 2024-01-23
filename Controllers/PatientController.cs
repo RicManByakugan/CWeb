@@ -11,13 +11,15 @@ namespace CWeb.Controllers
     {
         private readonly CWebDbContext _context;
         private readonly Nombre nombre;
+        
         public PatientController(CWebDbContext context) {
             nombre = new Nombre();
             _context = context;   
         }
-        public async Task<IActionResult> Index()
+
+        public IActionResult Index()
         {
-            return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
+            return View();
         }
 
         [HttpPost]
@@ -25,7 +27,6 @@ namespace CWeb.Controllers
         {
             bool Novalidate = true;
             string Ticket = nombre.GenerateRandomNumber();
-            string MessageAddOrNot = "";
             
             while (Novalidate)
             {
@@ -43,8 +44,15 @@ namespace CWeb.Controllers
                 }
             }
 
-            return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
+            ViewData["message"] = "Your ticket is : " + Ticket;
+            return View();
         
+        }
+
+
+        public async Task<IActionResult> FileAccueil()
+        {
+            return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
         }
     }
 }

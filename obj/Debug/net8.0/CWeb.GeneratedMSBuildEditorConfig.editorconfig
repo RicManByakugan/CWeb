@@ -26,16 +26,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Admin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Patient/FileAccueil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxGaWxlQWNjdWVpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Patient/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Personnel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Shared/Error.cshtml]

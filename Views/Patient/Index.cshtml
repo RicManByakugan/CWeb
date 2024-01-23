@@ -1,13 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model IEnumerable<Patient>
 
-<h1>Accueil Patient, get Ticket and subscribe</h1>
+<h1>Get Ticket</h1>
 
-@foreach (var item in Model) {
-    @Html.DisplayFor(modelItem => item.Ticket) <br/>
-}
 
 <form asp-action="Index">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -15,3 +11,5 @@
         <input type="submit" value="Generate Ticket" class="btn btn-primary" />
     </div>
 </form>
+
+<h1>@ViewData["message"]</h1>
