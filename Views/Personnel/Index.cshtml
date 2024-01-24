@@ -1,6 +1,21 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Personnel";
 }
+@model IEnumerable<Patient>
 
-<h1>ADMIN PERSONNELa</h1>
+
+<h6>ADMIN PERSONNEL : @ViewData["USER"]</h6>
+<h6>POSTE : @ViewData["POSTE"]</h6>
+<a asp-controller="Personnel" asp-action="Logout">Logout</a>
+
+<h6>En attente</h6>
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelItem => item.Ticket)
+    <form method="post" action="/Personnel/Receptionne">
+        <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
+        <button type="submit">Receptionne</button>
+    </form>
+    <br />
+}

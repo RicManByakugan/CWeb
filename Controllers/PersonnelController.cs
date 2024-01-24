@@ -1,12 +1,19 @@
+using CWeb.Data;
 using CWeb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace CWeb.Controllers
 {
     public class PersonnelController : Controller
     {
-        public IActionResult Index()
+        private readonly CWebDbContext _context;
+        public PersonnelController(CWebDbContext context) { 
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
         {
             var user = HttpContext.Session.GetString("_user");
             if (user == null)
@@ -15,8 +22,54 @@ namespace CWeb.Controllers
             }
             else
             {
-                return View();
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Receptionne(Patient patient)
+        {
+            var user = HttpContext.Session.GetString("_user");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification != null)
+                {
+                    string idpatient = HttpContext.Request.Form["idpatient"];
+                    var patient_verification = await _context.Patient.FirstOrDefaultAsync(m => m.Id.ToString() == idpatient);
+                    if (patient_verification != null)
+                    {
+                        if (user_verification.Poste == "ACCUEIL 1" || user_verification.Poste == "ACCUEIL 2" || user_verification.Poste == "ACCUEIL 3")
+                        {
+                            patient_verification.Receptionne = "OK";
+                            patient_verification.Accueil = user_verification.Poste;
+                            patient_verification = patient;
+                            _context.Update(patient_verification);
+                            await _context.SaveChangesAsync();
+                        }
+                    }
+                }
+                return new RedirectResult("/Personnel");
+            }
+        }
+        
+
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("_user");
+            return new RedirectResult("/Personnel");
         }
 
     }

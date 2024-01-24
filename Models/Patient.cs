@@ -8,6 +8,7 @@ namespace CWeb.Models
         public int Id { get; set; }
         public string? Ticket { get; set; }
         public string? Receptionne { get; set; }
+        public string? Accueil { get; set; }
         public string? Nom { get; set; }
         public string? Prenom { get; set; }
         public string? Sexe { get; set; }
