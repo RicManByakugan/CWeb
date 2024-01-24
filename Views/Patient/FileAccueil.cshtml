@@ -1,12 +1,37 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-@model IEnumerable<Patient>
+﻿@model DataFileAccueil
 
-<h1>Accueil Patient</h1>
+<div>
+    <h6>ATTENTE</h6>   
+    @foreach (var item in Model.Attente)
+    {
+        @item.Ticket
+        <br/>
+    }
+</div>
 
-@foreach (var item in Model)
-{
-    @Html.DisplayFor(modelItem => item.Ticket)
-    <br />
-}
+<div>
+    <h6>ACCUEIL I</h6>   
+    @foreach (var item in Model.Accueil1)
+    {
+        @item.Ticket
+        <br />
+    }
+</div>
+
+<div>
+    <h6>ACCUEIL II</h6>
+    @foreach (var item in Model.Accueil2)
+    {
+        @item.Ticket
+        <br />
+    }
+</div>
+
+<div>
+    <h6>ACCUEIL III</h6>
+    @foreach (var item in Model.Accueil3)
+    {
+        @item.Ticket
+        <br />
+    }
+</div>

@@ -14,7 +14,7 @@
 @foreach (var item in Model)
 {
     @Html.DisplayFor(modelItem => item.Ticket)
-    <form method="post" action="/Personnel/Receptionne">
+    <form method="post" action="/Accueil/Receptionne">
         <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
         <button type="submit">Receptionne</button>
     </form>

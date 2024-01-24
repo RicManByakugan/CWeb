@@ -52,7 +52,16 @@ namespace CWeb.Controllers
 
         public async Task<IActionResult> FileAccueil()
         {
-            return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
+            var data = new DataFileAccueil
+            {
+                Attente = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync(),
+                Accueil1 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 1").ToListAsync(),
+                Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2").ToListAsync(),
+                Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3").ToListAsync()
+            };
+            return View(data);
         }
     }
+
+    
 }
