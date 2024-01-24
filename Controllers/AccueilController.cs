@@ -76,9 +76,24 @@ namespace CWeb.Controllers
             }
         }
 
-        public IActionResult Consultation()
+        public async Task<IActionResult> Consultation()
         {
-            return View();
+            var user = HttpContext.Session.GetString("_user");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Patient.FirstOrDefaultAsync(m => m.Accueil == user_verification.Poste));
+            }
         }
         public IActionResult Logout()
         {
