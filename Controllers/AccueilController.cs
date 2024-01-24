@@ -57,7 +57,7 @@ namespace CWeb.Controllers
                             patient_verification = patient;
                             _context.Update(patient_verification);
                             await _context.SaveChangesAsync();
-                            return new RedirectResult("/Accueil/Consultation");
+                            return new RedirectResult("/Accueil/Consultation/"+ patient_verification.Id);
                         }
                         else
                         {
@@ -76,7 +76,7 @@ namespace CWeb.Controllers
             }
         }
 
-        public async Task<IActionResult> Consultation()
+        public async Task<IActionResult> Consultation(int? id)
         {
             var user = HttpContext.Session.GetString("_user");
             if (user == null)
@@ -92,9 +92,38 @@ namespace CWeb.Controllers
                 }
                 ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Patient.FirstOrDefaultAsync(m => m.Accueil == user_verification.Poste));
+                var patient = await _context.Patient.FindAsync(id);
+                return View(patient);
             }
         }
+        [HttpPost]
+        public async Task<IActionResult> Consultation(int id, [Bind("Id,ResultatConsultation,Service,Nom,Prenom,Sexe,Age,Telephone,Adresse")] Patient patient)
+        {
+            var user = HttpContext.Session.GetString("_user");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null || id != patient.Id)
+                {
+                    return NotFound();
+                }
+                try
+                {
+                    _context.Update(patient);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    return NotFound();
+                }
+                return new RedirectResult("/Accueil");
+            }
+        }
+
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("_user");

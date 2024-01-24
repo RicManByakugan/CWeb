@@ -9,6 +9,7 @@ namespace CWeb.Models
         public string? Ticket { get; set; }
         public string? Receptionne { get; set; }
         public string? Accueil { get; set; }
+        public string? ResultatConsultation { get; set; }
         public string? Service { get; set; }
         public string? Nom { get; set; }
         public string? Prenom { get; set; }

@@ -122,7 +122,7 @@ namespace CWeb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Login,Password,Poste,Nom,Prenom,Telephone,Adresse,Sexe")] Personnel personnel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Login,Poste,Nom,Prenom,Telephone,Adresse,Sexe")] Personnel personnel)
         {
             var user = HttpContext.Session.GetString("_useradmin");
             if (user == null)
