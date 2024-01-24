@@ -1,7 +1,10 @@
-using CWeb.Data;
+﻿using CWeb.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<CWebContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CWebContext") ?? throw new InvalidOperationException("Connection string 'CWebContext' not found.")));
 builder.Services.AddDbContext<CWebDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CWebDbContext") ?? throw new InvalidOperationException("Connection string 'AppDbContext' not found.")));
 
