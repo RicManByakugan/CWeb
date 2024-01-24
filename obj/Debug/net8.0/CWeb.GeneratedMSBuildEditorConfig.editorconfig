@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Accueil/Consultation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxDb25zdWx0YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Accueil/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
