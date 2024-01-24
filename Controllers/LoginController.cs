@@ -35,10 +35,20 @@ namespace CWeb.Controllers
             var perso = await _context.Personnel.FirstOrDefaultAsync(m => m.Login == name && m.Password == password);
             if (perso != null)
             {
-                HttpContext.Session.Remove("_user");
-                HttpContext.Session.SetString("_user", perso.Id.ToString());
-                ViewData["message"] = "Connected";
-                return new RedirectResult("/Personnel");
+                if (perso.Poste == "INFORMATIQUE")
+                {
+                    HttpContext.Session.Remove("_useradmin");
+                    HttpContext.Session.SetString("_useradmin", perso.Id.ToString());
+                    ViewData["message"] = "Connected";
+                    return new RedirectResult("/Informatique");
+                }
+                else
+                {
+                    HttpContext.Session.Remove("_user");
+                    HttpContext.Session.SetString("_user", perso.Id.ToString());
+                    ViewData["message"] = "Connected";
+                    return new RedirectResult("/Personnel");
+                }
             }
             else
             {
