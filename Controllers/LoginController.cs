@@ -22,7 +22,7 @@ namespace CWeb.Controllers
             }
             else
             {
-                return new RedirectResult("/Personnel");
+                return new RedirectResult("/Accueil");
             }
         }
 
@@ -47,7 +47,7 @@ namespace CWeb.Controllers
                     HttpContext.Session.Remove("_user");
                     HttpContext.Session.SetString("_user", perso.Id.ToString());
                     ViewData["message"] = "Connected";
-                    return new RedirectResult("/Personnel");
+                    return new RedirectResult("/Accueil");
                 }
             }
             else

@@ -35,7 +35,7 @@ namespace CWeb.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("_useradmin");
-            return new RedirectResult("/Personnel");
+            return new RedirectResult("/Accueil");
         }
 
         public async Task<IActionResult> Details(int? id)

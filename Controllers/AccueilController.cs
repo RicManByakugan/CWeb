@@ -6,10 +6,10 @@ using System.Diagnostics;
 
 namespace CWeb.Controllers
 {
-    public class PersonnelController : Controller
+    public class AccueilController : Controller
     {
         private readonly CWebDbContext _context;
-        public PersonnelController(CWebDbContext context) { 
+        public AccueilController(CWebDbContext context) { 
             _context = context;
         }
 
@@ -47,7 +47,7 @@ namespace CWeb.Controllers
                 if (user_verification != null)
                 {
                     string idpatient = HttpContext.Request.Form["idpatient"];
-                    var patient_verification = await _context.Patient.FirstOrDefaultAsync(m => m.Id.ToString() == idpatient);
+                    var patient_verification = await _context.Patient.FirstOrDefaultAsync(m => m.Id.ToString() == idpatient && m.Nom == null && m.Prenom == null);
                     if (patient_verification != null)
                     {
                         if (user_verification.Poste == "ACCUEIL 1" || user_verification.Poste == "ACCUEIL 2" || user_verification.Poste == "ACCUEIL 3")
@@ -57,19 +57,33 @@ namespace CWeb.Controllers
                             patient_verification = patient;
                             _context.Update(patient_verification);
                             await _context.SaveChangesAsync();
+                            return new RedirectResult("/Accueil/Consultation");
+                        }
+                        else
+                        {
+                            return new RedirectResult("/Login");
                         }
                     }
+                    else
+                    {
+                        return new RedirectResult("/Accueil");
+                    }
                 }
-                return new RedirectResult("/Personnel");
+                else
+                {
+                    return new RedirectResult("/Login");
+                }
             }
         }
-        
 
-
+        public IActionResult Consultation()
+        {
+            return View();
+        }
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("_user");
-            return new RedirectResult("/Personnel");
+            return new RedirectResult("/Accueil");
         }
 
     }
