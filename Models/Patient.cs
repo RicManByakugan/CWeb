@@ -10,7 +10,10 @@ namespace CWeb.Models
         public string? Receptionne { get; set; }
         public string? Accueil { get; set; }
         public string? ResultatConsultation { get; set; }
+        public int? Cout { get; set; }
+        public string? Finition { get; set; }
         public string? Service { get; set; }
+        public string? ReceptionneService { get; set; }
         public string? Nom { get; set; }
         public string? Prenom { get; set; }
         public string? Sexe { get; set; }

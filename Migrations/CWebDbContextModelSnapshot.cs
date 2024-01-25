@@ -39,6 +39,12 @@ namespace CWeb.Migrations
                     b.Property<int?>("Age")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Cout")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Finition")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Nom")
                         .HasColumnType("nvarchar(max)");
 
@@ -46,6 +52,9 @@ namespace CWeb.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Receptionne")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReceptionneService")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ResultatConsultation")

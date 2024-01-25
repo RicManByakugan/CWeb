@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Service";
+}
+@model IEnumerable<Patient>
+
+
+<h6>ADMIN PERSONNEL SERIVE : @ViewData["USER"]</h6>
+<h6>POSTE : @ViewData["POSTE"]</h6>
+<a asp-controller="Accueil" asp-action="Logout">Logout</a>
+
+<h6>En attente</h6>
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelItem => item.Ticket)
+    <form method="post" action="/Service/Receptionne">
+        <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
+        <button type="submit">Receptionne</button>
+    </form>
+    <br />
+}

@@ -42,12 +42,20 @@ namespace CWeb.Controllers
                     ViewData["message"] = "Connected";
                     return new RedirectResult("/Informatique");
                 }
-                else
+                else if (perso.Poste == "ACCUEIL 1" || perso.Poste == "ACCUEIL 2" || perso.Poste == "ACCUEIL 3")
                 {
                     HttpContext.Session.Remove("_user");
                     HttpContext.Session.SetString("_user", perso.Id.ToString());
                     ViewData["message"] = "Connected";
                     return new RedirectResult("/Accueil");
+
+                }
+                else
+                {
+                    HttpContext.Session.Remove("_userservice");
+                    HttpContext.Session.SetString("_userservice", perso.Id.ToString());
+                    ViewData["message"] = "Connected";
+                    return new RedirectResult("/Service");
                 }
             }
             else

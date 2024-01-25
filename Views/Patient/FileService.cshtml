@@ -1,0 +1,19 @@
+﻿@model DataFileAccueil
+
+<div>
+    <h6>ATTENTE</h6>
+    @foreach (var item in Model.Attente)
+    {
+        @item.Ticket
+        <br />
+    }
+</div>
+
+<div>
+    <h6>RECEPTION</h6>
+    @foreach (var item in Model.Accueil1)
+    {
+        @item.Ticket
+        <br />
+    }
+</div>

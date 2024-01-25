@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CWeb.Migrations
 {
     [DbContext(typeof(CWebDbContext))]
-    [Migration("20240125055007_Initi")]
-    partial class Initi
+    [Migration("20240125080904_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,12 @@ namespace CWeb.Migrations
                     b.Property<int?>("Age")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Cout")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Finition")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Nom")
                         .HasColumnType("nvarchar(max)");
 
@@ -49,6 +55,9 @@ namespace CWeb.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Receptionne")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReceptionneService")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ResultatConsultation")

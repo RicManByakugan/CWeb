@@ -5,7 +5,7 @@
 namespace CWeb.Migrations
 {
     /// <inheritdoc />
-    public partial class Initi : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,10 @@ namespace CWeb.Migrations
                     Receptionne = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Accueil = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ResultatConsultation = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cout = table.Column<int>(type: "int", nullable: true),
+                    Finition = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Service = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ReceptionneService = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nom = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Prenom = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Sexe = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -57,11 +60,7 @@ namespace CWeb.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            /*migrationBuilder.DropTable(
-                name: "Patient");
-
-            migrationBuilder.DropTable(
-                name: "Personnel");*/
+            
         }
     }
 }
