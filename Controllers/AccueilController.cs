@@ -1,5 +1,6 @@
 using CWeb.Data;
 using CWeb.Models;
+using CWeb.Tools;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -54,10 +55,9 @@ namespace CWeb.Controllers
                         {
                             patient_verification.Receptionne = "OK";
                             patient_verification.Accueil = user_verification.Poste;
-                            patient_verification = patient;
                             _context.Update(patient_verification);
                             await _context.SaveChangesAsync();
-                            return new RedirectResult("/Accueil/Consultation/"+ patient_verification.Id);
+                            return new RedirectResult("/Accueil/Consultation/" + patient_verification.Id);
                         }
                         else
                         {
@@ -86,18 +86,41 @@ namespace CWeb.Controllers
             else
             {
                 var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
-                if (user_verification == null)
+                if (user_verification != null)
                 {
-                    return NotFound();
+                    if (id != null)
+                    {
+                        var patient_verification = await _context.Patient.FirstOrDefaultAsync(m => m.Id == id && m.Nom == null && m.Prenom == null);
+                        if (patient_verification != null)
+                        {
+                            if (user_verification.Poste == "ACCUEIL 1" || user_verification.Poste == "ACCUEIL 2" || user_verification.Poste == "ACCUEIL 3")
+                            {
+                                return View(patient_verification);
+                            }
+                            else
+                            {
+                                return new RedirectResult("/Login");
+                            }
+                        }
+                        else
+                        {
+                            return new RedirectResult("/Accueil");
+                        }
+                    }
+                    else
+                    {
+                        return new RedirectResult("/Accueil");
+                    }
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
-                ViewData["POSTE"] = user_verification.Poste;
-                var patient = await _context.Patient.FindAsync(id);
-                return View(patient);
+                else
+                {
+                    return new RedirectResult("/Login");
+                }
             }
         }
+
         [HttpPost]
-        public async Task<IActionResult> Consultation(int id, [Bind("Id,ResultatConsultation,Service,Nom,Prenom,Sexe,Age,Telephone,Adresse")] Patient patient)
+        public async Task<IActionResult> Consultation(Patient patient)
         {
             var user = HttpContext.Session.GetString("_user");
             if (user == null)
@@ -107,20 +130,17 @@ namespace CWeb.Controllers
             else
             {
                 var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
-                if (user_verification == null || id != patient.Id)
+                if (user_verification != null)
                 {
-                    return NotFound();
-                }
-                try
-                {
+                    VarDump.Dump(patient);
                     _context.Update(patient);
                     await _context.SaveChangesAsync();
+                    return new RedirectResult("/Accueil");
                 }
-                catch (DbUpdateConcurrencyException)
+                else
                 {
-                    return NotFound();
+                    return new RedirectResult("/Login");
                 }
-                return new RedirectResult("/Accueil");
             }
         }
 

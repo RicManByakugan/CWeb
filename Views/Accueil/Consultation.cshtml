@@ -1,21 +1,34 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@model Patient
+﻿@model Patient
 
-<h1>Consultation Patient</h1>
+@Html.DisplayFor(model => model.Ticket)
 
-@Html.DisplayNameFor(model => model.Ticket)
-<br />
 <form asp-action="Consultation">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Ticket" />
+    <input type="hidden" asp-for="Receptionne" />
+    <input type="hidden" asp-for="Accueil" />
+    <div class="form-group">
+        <label asp-for="ResultatConsultation" class="control-label"></label>
+        <textarea asp-for="ResultatConsultation" class="form-control"></textarea>
+        <span asp-validation-for="ResultatConsultation" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Service" class="control-label"></label>
+        <select asp-for="Service" class="form-control">
+            <option>GYNECO</option>
+            <option>DENTAIRE</option>
+        </select>
+        <span asp-validation-for="Sexe" class="text-danger"></span>
+    </div>
     <div class="form-group">
         <label asp-for="Nom" class="control-label"></label>
         <input asp-for="Nom" class="form-control" />
+        <span asp-validation-for="Nom" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Prenom" class="control-label"></label>
         <input asp-for="Prenom" class="form-control" />
+        <span asp-validation-for="Prenom" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Sexe" class="control-label"></label>
@@ -23,29 +36,24 @@
             <option>HOMME</option>
             <option>FEMME</option>
         </select>
+        <span asp-validation-for="Sexe" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Age" class="control-label"></label>
         <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Telephone" class="control-label"></label>
         <input asp-for="Telephone" class="form-control" />
+        <span asp-validation-for="Telephone" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Adresse" class="control-label"></label>
         <input asp-for="Adresse" class="form-control" />
+        <span asp-validation-for="Adresse" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="ResultatConsultation" class="control-label"></label>
-        <textarea asp-for="ResultatConsultation" class="form-control"></textarea>
-    </div>
-    <select asp-for="Service" class="form-control">
-        <option>DENTAIRE</option>
-        <option>GYNECO</option>
-    </select>
     <div class="form-group">
         <input type="submit" value="Save" class="btn btn-primary" />
     </div>
 </form>
-

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CWeb.Migrations
 {
     [DbContext(typeof(CWebDbContext))]
-    [Migration("20240123070826_SetAgePropretyPatientToNull")]
-    partial class SetAgePropretyPatientToNull
+    [Migration("20240125055007_Initi")]
+    partial class Initi
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,27 +25,6 @@ namespace CWeb.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CWeb.Models.Accueil", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Numero")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("PersonnelId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PersonnelId");
-
-                    b.ToTable("Accueil");
-                });
-
             modelBuilder.Entity("CWeb.Models.Patient", b =>
                 {
                     b.Property<int>("Id")
@@ -53,6 +32,9 @@ namespace CWeb.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Accueil")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Adresse")
                         .HasColumnType("nvarchar(max)");
@@ -67,6 +49,12 @@ namespace CWeb.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Receptionne")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ResultatConsultation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Service")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sexe")
@@ -118,31 +106,6 @@ namespace CWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Personnel");
-                });
-
-            modelBuilder.Entity("CWeb.Models.Service", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("NomService")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Service");
-                });
-
-            modelBuilder.Entity("CWeb.Models.Accueil", b =>
-                {
-                    b.HasOne("CWeb.Models.Personnel", "Personnel")
-                        .WithMany()
-                        .HasForeignKey("PersonnelId");
-
-                    b.Navigation("Personnel");
                 });
 #pragma warning restore 612, 618
         }
