@@ -49,25 +49,25 @@ namespace CWeb.Controllers
         
         }
 
-
         public async Task<IActionResult> FileAccueil()
         {
             var data = new DataFileAccueil
             {
                 Attente = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync(),
-                Accueil1 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 1").ToListAsync(),
-                Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2").ToListAsync(),
-                Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3").ToListAsync()
+                Accueil1 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 1" && m.ResultatConsultation == null).ToListAsync(),
+                Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2" && m.ResultatConsultation == null).ToListAsync(),
+                Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3" && m.ResultatConsultation == null).ToListAsync()
             };
             return View(data);
         }
 
+        [Route("Patient/FileService/{serviceName}")]
         public async Task<IActionResult> FileService(string serviceName)
         {
             var data = new DataFileAccueil
             {
                 Attente = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null).ToListAsync(),
-                Accueil1 = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == "OK").ToListAsync(),
+                Accueil1 = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == "OK" && m.Finition == null).ToListAsync(),
             };
             return View(data);
         }

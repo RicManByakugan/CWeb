@@ -29,7 +29,7 @@ namespace CWeb.Controllers
                 }
                 ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Patient.Where(m => m.ReceptionneService == null && m.Service != null).ToListAsync());
+                return View(await _context.Patient.Where(m => m.ReceptionneService == null && m.Service == user_verification.Poste).ToListAsync());
             }
         }
 
@@ -130,6 +130,7 @@ namespace CWeb.Controllers
                 if (user_verification != null)
                 {
                     VarDump.Dump(patient);
+                    patient.ReceptionneService = "OK";
                     _context.Update(patient);
                     await _context.SaveChangesAsync();
                     return new RedirectResult("/Service");
