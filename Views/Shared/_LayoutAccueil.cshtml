@@ -29,8 +29,8 @@
                         <span>@ViewData["USER"]</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">My Profile</a>
-                        <a class="dropdown-item" href="#">Edit Profile</a>
+                        <a asp-controller="Accueil" asp-action="Profile" class="dropdown-item">My Profile</a>
+                        <a asp-controller="Accueil" asp-action="EditProfile" class="dropdown-item">Edit Profile</a>
                         <a asp-controller="Accueil" asp-action="Logout" class="dropdown-item">Logout</a>
                     </div>
                 </li>
@@ -38,8 +38,8 @@
             <div class="dropdown mobile-user-menu float-right">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">My Profile</a>
-                    <a class="dropdown-item" href="#">Edit Profile</a>
+                    <a asp-controller="Accueil" asp-action="Profile" class="dropdown-item">My Profile</a>
+                    <a asp-controller="Accueil" asp-action="EditProfile" class="dropdown-item">Edit Profile</a>
                     <a asp-controller="Accueil" asp-action="Logout" class="dropdown-item">Logout</a>
                 </div>
             </div>
@@ -51,13 +51,10 @@
                     <ul>
                         <li class="menu-title">Main</li>
                         <li>
-                            <a><i class="fa fa-hourglass"></i> <span>Waiting</span></a>
+                            <a asp-controller="Accueil" asp-action="ListeReceptionne"><span>File d'attente</span></a>
                         </li>
                         <li>
-                            <a><i class="fa fa-check-square"></i> <span>My patient</span></a>
-                        </li>
-                        <li>
-                            <a><i class="fa fa-line-chart"></i> <span>Stat</span></a>
+                            <a asp-controller="Accueil" asp-action="Index"><span>Non recus</span></a>
                         </li>
                     </ul>
                 </div>

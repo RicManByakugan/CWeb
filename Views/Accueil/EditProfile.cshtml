@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
+    ViewData["Title"] = "EDIT PROFIL";
+}
+@model Personnel
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <h4 class="card-title">Edit profil</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="EditProfile" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Login" />
+                    <input type="hidden" asp-for="Password" />
+                    <div class="form-group">
+                        <label asp-for="Nom" class="col-md-3 col-form-label"></label>
+                        <div class="col-md-9">
+                            <input asp-for="Nom" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Nom" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Prenom" class="col-md-3 col-form-label"></label>
+                        <div class="col-md-9">
+                            <input asp-for="Prenom" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Prenom" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Sexe" class="col-md-3 col-form-label"></label>
+                        <div class="col-md-9">
+                            <select class="form-control" asp-for="Sexe">
+                                <option>HOMME</option>
+                                <option>FEMME</option>
+                            </select>
+                        </div>
+                        <span asp-validation-for="Sexe" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Telephone" class="col-md-3 col-form-label"></label>
+                        <div class="col-md-9">
+                            <input asp-for="Telephone" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Telephone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Adresse" class="col-md-3 col-form-label"></label>
+                        <div class="col-md-9">
+                            <input asp-for="Adresse" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Adresse" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

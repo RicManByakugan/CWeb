@@ -30,8 +30,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxDb25zdWx0YXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Accueil/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Accueil/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Accueil/ListeReceptionne.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxMaXN0ZVJlY2VwdGlvbm5lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Accueil/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Create.cshtml]
