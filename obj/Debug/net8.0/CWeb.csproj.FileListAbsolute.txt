@@ -260,3 +260,4 @@ F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.AspNet
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\Microsoft.JSInterop.dll
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\CWeb.sourcelink.json
+F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutAccueil.cshtml.rz.scp.css

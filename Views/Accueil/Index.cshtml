@@ -1,21 +1,35 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewData["Title"] = "Personnel";
+    Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
+    ViewData["Title"] = "PERSONNEL";
 }
 @model IEnumerable<Patient>
 
+<div class="w-100 row">
+    <div class="col-md-10 mx-auto">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <h4 class="card-title">WAITING</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-xl-4">
+                            <div class="bg-info dash-widget">
+                                <div class="dash-widget-info text-left d-flex justify-content-between">
+                                    <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">1072</h3>
+                                    <form method="post" action="/Accueil/Receptionne">
+                                        <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
+                                        <button class="small btn-sm btn-outline-success btn">Receptionne</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h6>ADMIN PERSONNEL : @ViewData["USER"]</h6>
-<h6>POSTE : @ViewData["POSTE"]</h6>
-<a asp-controller="Accueil" asp-action="Logout">Logout</a>
 
-<h6>En attente</h6>
-@foreach (var item in Model)
-{
-    @Html.DisplayFor(modelItem => item.Ticket)
-    <form method="post" action="/Accueil/Receptionne">
-        <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
-        <button type="submit">Receptionne</button>
-    </form>
-    <br />
-}

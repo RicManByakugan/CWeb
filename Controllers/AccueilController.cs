@@ -28,7 +28,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Nom;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
             }
