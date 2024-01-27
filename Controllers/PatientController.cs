@@ -44,7 +44,7 @@ namespace CWeb.Controllers
                 }
             }
 
-            ViewData["message"] = "Your ticket is : " + Ticket;
+            ViewData["message"] = Ticket;
             return View();
         
         }
@@ -69,6 +69,7 @@ namespace CWeb.Controllers
                 Attente = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null).ToListAsync(),
                 Accueil1 = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == "OK" && m.Finition == null).ToListAsync(),
             };
+            ViewData["service"] = serviceName;
             return View(data);
         }
     }

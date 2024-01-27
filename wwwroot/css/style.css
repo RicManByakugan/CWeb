@@ -1,61 +1,3 @@
-/*
-Author       : Dreamguys
-Template Name: PreClinic - Medical and Hospital Admin Template
-Version      : 1.0
-*/
-
-/*============================
- [Table of CSS]
-
-1. General
-2. Table
-3. Helper Class
-4. Bootstrap Classes
-5. Header
-6. Sidebar
-7. Content
-8. Login
-9. Dashboard
-10. Activity
-11. Select2
-12. Nav tabs
-13. Holidays
-14. Edit Profile
-15. Chat
-16. Focus Label
-17. Leave
-18. Employee
-19. Events
-20. Profile
-21. Notifications
-22. Roles & Permissions
-23. Chat Right Sidebar
-24. Invoice
-25. Doctors
-26. Add Doctor
-27. Payslip
-28. Attendance
-29. Inbox
-30. Mail View
-31. Blog
-32. Blog View
-33. UI Kit
-34. Error
-35. Lock Screen
-36. Voice call
-37. Video Call
-38. Incoming call
-39. Notification settings
-40. Chat Sidebar
-41. Gallery
-42. Responsive
-
-========================================*/
-
-/*-----------------
-	1. General
------------------------*/
-
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
 html {
 	height: 100%;
@@ -63,8 +5,6 @@ html {
 body {
 	font-family: 'Rubik', sans-serif;
 	font-size: 0.875rem;
-	color: #666;
-	background-color: #fafafa;
 	overflow-x: hidden;
 	height: 100%;
 }
@@ -434,6 +374,37 @@ table.table td h2 span {
 .btn-primary {
 	border-color: transparent;
 	background-color: #009efb;
+}
+.btn-ticket{
+	width: 350px;
+	height: 350px;
+	text-align: center;
+	border-radius: 50%;
+	display: table-cell;
+	animation: animationTicket 4s linear infinite;
+}
+@keyframes animationTicket {
+	0% {
+		box-shadow: 0px 0px 0px 0px #fff;
+	}
+	20%{
+		box-shadow: 0px 0px 50px 0px #fff;
+	}
+	40% {
+		box-shadow: 0px 0px 100px 0px #fff;
+	}
+	60%{
+		box-shadow: 0px 0px 100px 0px #fff;
+	}
+	80% {
+		box-shadow: 0px 0px 50px 0px #fff;
+	}
+	100% {
+		box-shadow: 0px 0px 0px 0px #009efb;
+	}
+}
+.btn-ticket .fa{
+	font-size: 100px;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -4029,12 +4000,7 @@ blockquote p {
 	padding-top: 20px;
 }
 
-/*-----------------
-	34. Error
------------------------*/
-
-.error-box {
-	background-color: #fff;
+.box-center-custom {
 	border-radius: 5px;
 	line-height: 1;
 	margin: 0 auto;
@@ -4043,6 +4009,64 @@ blockquote p {
 	text-align: center;
 	width: 100%;
 }
+
+.box-center-custom p {
+	margin-bottom: 30px;
+}
+.box-center-custom .btn {
+	text-transform: uppercase;
+}
+
+.box-center-wrapper {
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.8435749299719888) 15%, rgba(0,212,255,1) 85%);
+	margin: 0;
+	color: #4F5155;
+	-moz-box-align: center;
+	-moz-box-pack: center;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+.main-custom-back{
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.8435749299719888) 15%, rgba(0,212,255,1) 85%);
+	height: 100%;
+}
+.content-slider-width {
+	height: 500px !important;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: transparent transparent;
+	-ms-overflow-style: none;
+}
+
+.content-slider-width::-webkit-scrollbar {
+	width: 0.5rem; 
+}
+
+.content-slider-width::-webkit-scrollbar-thumb {
+	background-color: transparent; 
+}
+
+.content-slider-width .row{
+	animation: scrollAnimationA 10s linear infinite;
+}
+
+@keyframes scrollAnimationA {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(calc(-100% + 500px));
+	}
+}
+/*-----------------
+	34. Error
+-----------------------*/
+
 .error-heading {
 	font-size: 3.5em;
 	font-weight: bold;
@@ -4053,26 +4077,8 @@ blockquote p {
 	font-weight: normal;
 	margin: 0 0 1.5rem;
 }
-.error-wrapper {
-	background-color: #fff;
-	margin: 0;
-	color: #4F5155;
-	-moz-box-align: center;
-	-moz-box-pack: center;
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
-.error-box h1 {
-	font-size: 150px;
-}
-.error-box p {
-	margin-bottom: 30px;
-}
-.error-box .btn {
-	text-transform: uppercase;
-}
+
+
 
 /*-----------------
 	35. Lock Screen

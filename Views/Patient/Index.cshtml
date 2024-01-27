@@ -1,15 +1,58 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "TICKET";
 }
 
-<h1>Get Ticket</h1>
-
-
-<form asp-action="Index">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="form-group">
-        <input type="submit" value="Generate Ticket" class="btn btn-primary" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CWEB | @ViewData["Title"]</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+<body>
+    @{
+        string messageToString = ViewData["message"] as string;
+        if (!string.IsNullOrEmpty(messageToString))
+        {
+            <div class="w-100" style="position: absolute;">
+                <div class="row">
+                    <div class="col-sm-9"></div>
+                    <div class="col-sm-3">
+                        <div class="card-box">
+                            <h4 class="card-title d-flex justify-content-between">Your Ticket <i class="close fa fa-ticket"></i></h4>
+                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <strong>@ViewData["message"]</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    
+    <div class="main-wrapper box-center-wrapper">
+        <div class="box-center-custom">
+            <div class="d-inline">
+                <form asp-action="Index">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary go-home btn-ticket">
+                            <i class="fa fa-ticket"></i>
+                        </button>
+                    </div>
+                </form>
+                <h1 class="mt-5 text-white">Generate a ticket</h1>
+                <small class="text-white">CWEB | 2024</small>
+            </div>
+        </div>
     </div>
-</form>
 
-<h1>@ViewData["message"]</h1>
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

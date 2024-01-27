@@ -1,37 +1,112 @@
 ﻿@model DataFileAccueil
 
-<div>
-    <h6>ATTENTE</h6>   
-    @foreach (var item in Model.Attente)
-    {
-        @item.Ticket
-        <br/>
-    }
-</div>
+@{
+    ViewData["Title"] = "PATIENT";
+}
 
-<div>
-    <h6>ACCUEIL I</h6>   
-    @foreach (var item in Model.Accueil1)
-    {
-        @item.Ticket
-        <br />
-    }
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CWEB | @ViewData["Title"]</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+<body>
+    <div class="main-custom-back">
+        <div class="w-100 row">
+            <div class="col-md-4">
+                <div class="mt-3 card">
+                    <div class="card-header border-bottom">
+                        <h4 class="card-title">WAITING</h4>
+                    </div>
+                    <div class="card-body content-slider-width">
+                        <div class="row">
+                            
+                            @foreach (var item in Model.Attente)
+                            {
+                                <div class="col-xl-4">
+                                    <div class="bg-info dash-widget">
+                                        <div class="dash-widget-info text-left">
+                                            <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mt-3 card">
+                            <div class="card-header border-bottom">
+                                <h4 class="card-title">ACCUEIL I</h4>
+                            </div>
+                            <div class="card-body">
+                                @foreach (var item in Model.Accueil1)
+                                {
+                                    <div class="bg-info dash-widget">
+                                        <div class="dash-widget-info text-left">
+                                            <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mt-3 card">
+                            <div class="card-header border-bottom">
+                                <h4 class="card-title">ACCUEIL II</h4>
+                            </div>
+                            <div class="card-body">
+                                @foreach (var item in Model.Accueil2)
+                                {
+                                    <div class="bg-info dash-widget">
+                                        <div class="dash-widget-info text-left">
+                                            <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mt-3 card">
+                            <div class="card-header border-bottom">
+                                <h4 class="card-title">ACCUEIL III</h4>
+                            </div>
+                            <div class="card-body">
+                                @foreach (var item in Model.Accueil3)
+                                {
+                                    <div class="bg-info dash-widget">
+                                        <div class="dash-widget-info text-left">
+                                            <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-bottom w-100 mb-3">
+            <div class="w-100">
+                <div class="text-center">
+                    <small class="mb-0 text-white">CWeb | Version 1.0</small>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div>
-    <h6>ACCUEIL II</h6>
-    @foreach (var item in Model.Accueil2)
-    {
-        @item.Ticket
-        <br />
-    }
-</div>
-
-<div>
-    <h6>ACCUEIL III</h6>
-    @foreach (var item in Model.Accueil3)
-    {
-        @item.Ticket
-        <br />
-    }
-</div>
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>
