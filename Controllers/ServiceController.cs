@@ -33,6 +33,85 @@ namespace CWeb.Controllers
             }
         }
 
+        public async Task<IActionResult> Profile()
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(user_verification);
+            }
+        }
+
+        public async Task<IActionResult> EditProfile()
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(user_verification);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditProfile(Personnel personnel)
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                ViewData["USER"] = personnel.Nom;
+                ViewData["POSTE"] = personnel.Poste;
+                _context.Update(personnel);
+                await _context.SaveChangesAsync();
+                return View(personnel);
+            }
+        }
+
+        public async Task<IActionResult> ListeReceptionne()
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Patient.Where(m => m.ReceptionneService == "OK" && m.Accueil == user_verification.Poste && m.Finition == null).ToListAsync());
+            }
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Receptionne(Patient patient)
         {
@@ -73,6 +152,46 @@ namespace CWeb.Controllers
                 }
             }
         }
+
+        public async Task<IActionResult> Retire(int? id)
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification != null)
+                {
+                    if (id != null)
+                    {
+                        var patient_verification = await _context.Patient.FirstOrDefaultAsync(m => m.Id == id && m.Nom == null && m.Prenom == null);
+                        if (patient_verification != null)
+                        {
+                            patient_verification.ReceptionneService = null;
+                            _context.Update(patient_verification);
+                            await _context.SaveChangesAsync();
+                            return new RedirectResult("/Accueil/ListeReceptionne");
+                        }
+                        else
+                        {
+                            return new RedirectResult("/Accueil");
+                        }
+                    }
+                    else
+                    {
+                        return new RedirectResult("/Accueil");
+                    }
+                }
+                else
+                {
+                    return new RedirectResult("/Login");
+                }
+            }
+        }
+
         public async Task<IActionResult> Validation(int? id)
         {
             var user = HttpContext.Session.GetString("_userservice");

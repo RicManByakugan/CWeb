@@ -1,6 +1,6 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutService.cshtml";
-    ViewData["Title"] = "PERSONNEL";
+    ViewData["Title"] = "FILE D'ATTENTE";
 }
 @model IEnumerable<Patient>
 
@@ -8,7 +8,7 @@
     <div class="col-md-10 mx-auto">
         <div class="card">
             <div class="card-header border-bottom">
-                <h4 class="card-title">EN ATTENTE</h4>
+                <h4 class="card-title">FILE D'ATTENTE</h4>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -18,10 +18,10 @@
                             <div class="bg-info dash-widget">
                                 <div class="dash-widget-info text-left d-flex justify-content-between">
                                     <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
-                                    <form method="post" action="/Service/Receptionne">
-                                        <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
-                                        <button class="small btn-sm btn-outline-success btn">Receptionne</button>
-                                    </form>
+                                    <div class="d-flex justify-content-between align-item-center text-white">
+                                        <a asp-controller="Service" asp-action="Validation" asp-route-id="@item.Id" class="small btn-sm btn-outline-success btn ml-1"><i class="fa fa-edit"></i></a>
+                                        <a asp-controller="Service" asp-action="Retire" asp-route-id="@item.Id" class="small btn-sm btn-outline-danger btn"><i class="fa fa-times"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -31,3 +31,5 @@
         </div>
     </div>
 </div>
+
+
