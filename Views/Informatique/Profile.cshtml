@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutInfo.cshtml";
+    ViewData["Title"] = "PROFIL";
+}
+
+@model Personnel
+
+<div class="row">
+    <div class="col-sm-6 mx-auto">
+        <div class="card-box">
+            <h1>@Html.DisplayFor(model => model.Poste)</h1>
+            <h3>@Html.DisplayFor(model => model.Nom) @Html.DisplayFor(model => model.Prenom)</h3><hr>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nom :</td>
+                        <td>@Html.DisplayFor(model => model.Nom)</td>
+                    </tr>
+                    <tr>
+                        <td>Prenom :</td>
+                        <td>@Html.DisplayFor(model => model.Prenom)</td>
+                    </tr>
+                    <tr>
+                        <td>Sexe :</td>
+                        <td>@Html.DisplayFor(model => model.Sexe)</td>
+                    </tr>
+                    <tr>
+                        <td>Telephone :</td>
+                        <td>@Html.DisplayFor(model => model.Telephone)</td>
+                    </tr>
+                    <tr>
+                        <td>Adresse :</td>
+                        <td>@Html.DisplayFor(model => model.Adresse)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

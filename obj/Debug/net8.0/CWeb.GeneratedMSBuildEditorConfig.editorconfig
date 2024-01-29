@@ -62,8 +62,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Login/Index.cshtml]
@@ -149,6 +157,10 @@ build_metadata.AdditionalFiles.CssScope = b-djbhu3dyzc
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Shared/_LayoutAccueil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBY2N1ZWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-t4epugd15j
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Shared/_LayoutInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-mquubpg968
 
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Shared/_LayoutService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTZXJ2aWNlLmNzaHRtbA==

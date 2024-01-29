@@ -32,11 +32,7 @@ namespace CWeb.Controllers
             }
         }
 
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Remove("_useradmin");
-            return new RedirectResult("/Accueil");
-        }
+
 
         public async Task<IActionResult> Details(int? id)
         {
@@ -62,6 +58,8 @@ namespace CWeb.Controllers
                 return View(personnel);
             }
         }
+
+
 
         public IActionResult Create()
         {
@@ -219,5 +217,70 @@ namespace CWeb.Controllers
                 return _context.Personnel.Any(e => e.Id == id);
             }
         }
+
+        public async Task<IActionResult> Profile()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(user_verification);
+            }
+        }
+
+        public async Task<IActionResult> EditProfile()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(user_verification);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditProfile(Personnel personnel)
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                ViewData["USER"] = personnel.Nom;
+                ViewData["POSTE"] = personnel.Poste;
+                _context.Update(personnel);
+                await _context.SaveChangesAsync();
+                return View(personnel);
+            }
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("_useradmin");
+            return new RedirectResult("/Accueil");
+        }
+
     }
 }
