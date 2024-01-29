@@ -43,11 +43,11 @@ namespace CWeb.Controllers
                     Novalidate = false;
                 }
             }
-
+            string ticketContent = "Your ticket : " + Ticket;
             ViewData["message"] = Ticket;
             return View();
-        
         }
+
 
         public async Task<IActionResult> FileAccueil()
         {

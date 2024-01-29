@@ -285,6 +285,18 @@
       "PackagePath": "staticwebassets\\js\\tagsinput.js"
     },
     {
+      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jquery.min.js",
+      "PackagePath": "staticwebassets\\pdf\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jszip.min.js",
+      "PackagePath": "staticwebassets\\pdf\\jszip.min.js"
+    },
+    {
+      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\kendo.all.min.js",
+      "PackagePath": "staticwebassets\\pdf\\kendo.all.min.js"
+    },
+    {
       "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\css\\lightgallery.min.css",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\css\\lightgallery.min.css"
     },

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "y6MfExX9Pi/9TizQty0EU/Neu3Gm7jMGz1fn2vAWw8Kd7Al7s2B3PlHHZ7/rNMvjspRxqs+Bty1hG1F+ix3XNQ==",
+  "dgSpecHash": "/k/RjdSfHqE6nqMgir1QzV/RKW0EnNNXGPoBbWPKV2D1ShkqQyKFXhGv2T2rcnJ6sL/ERGRuNFUsqaJMAv8/tQ==",
   "success": true,
   "projectFilePath": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\CWeb.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,8 @@
     "C:\\Users\\Ratovonirina\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\Ratovonirina\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Ratovonirina\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\Ratovonirina\\.nuget\\packages\\itext.commons\\8.0.2\\itext.commons.8.0.2.nupkg.sha512",
+    "C:\\Users\\Ratovonirina\\.nuget\\packages\\itext7.commons\\8.0.2\\itext7.commons.8.0.2.nupkg.sha512",
     "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.1\\microsoft.aspnetcore.authorization.8.0.1.nupkg.sha512",
     "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.1\\microsoft.aspnetcore.components.8.0.1.nupkg.sha512",
     "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.1\\microsoft.aspnetcore.components.analyzers.8.0.1.nupkg.sha512",

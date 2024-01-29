@@ -18,19 +18,22 @@
         string messageToString = ViewData["message"] as string;
         if (!string.IsNullOrEmpty(messageToString))
         {
-            <div class="w-100" style="position: absolute;">
-                <div class="row">
-                    <div class="col-sm-9"></div>
-                    <div class="col-sm-3">
-                        <div class="card-box">
-                            <h4 class="card-title d-flex justify-content-between">Your Ticket <i class="close fa fa-ticket"></i></h4>
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <strong>@ViewData["message"]</strong>
+                <div class="w-100" style="position: absolute;" id="PDFPrinter">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box">
+                                <h4 class="card-title d-flex justify-content-between">Your Ticket <i class="close fa fa-ticket"></i></h4>
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                    <strong>@ViewData["message"]</strong>
+                                </div>
+                                <hr />
+                                <div class="text-center">
+                                    <small class="text-secondary">CWEB | 2024</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         }
     }
     
@@ -51,8 +54,32 @@
         </div>
     </div>
 
+   
     <script src="~/js/jquery-3.2.1.min.js"></script>
     <script src="~/js/popper.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/pdf/jquery.min.js"></script>
+    <script src="~/pdf/jszip.min.js"></script>
+    <script src="~/pdf/kendo.all.min.js"></script>
+    <script>
+        function hidePDFPrinter() {
+            var element = document.getElementById('PDFPrinter');
+            if (element) {
+                PDFPrint()
+                element.style.display = 'none';
+            }
+        }
+        setTimeout(hidePDFPrinter, 5000);
+        function PDFPrint(){
+            kendo.drawing
+                .drawDOM("#PDFPrinter",
+                    {
+                        paperSize: "A7",
+                    })
+                .then(function (group) {
+                    kendo.drawing.pdf.saveAs(group, "TICKET.pdf");
+                });
+        }
+    </script>
 </body>
 </html>
