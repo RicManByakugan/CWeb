@@ -4035,7 +4035,7 @@ blockquote p {
 	height: 100%;
 }
 .content-slider-width {
-	height: 500px !important;
+	height: 100vh !important;
 	overflow-y: auto;
 	scrollbar-width: thin;
 	scrollbar-color: transparent transparent;
@@ -4050,9 +4050,9 @@ blockquote p {
 	background-color: transparent; 
 }
 
-.content-slider-width .row{
+/*.content-slider-width .row{
 	animation: scrollAnimationA 10s linear infinite;
-}
+}*/
 
 @keyframes scrollAnimationA {
 	0% {

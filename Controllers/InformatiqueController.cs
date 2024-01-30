@@ -34,7 +34,7 @@ namespace CWeb.Controllers
 
 
 
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id, string? mdp)
         {
             var user = HttpContext.Session.GetString("_useradmin");
             if (user == null)
@@ -43,6 +43,14 @@ namespace CWeb.Controllers
             }
             else
             {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+
                 if (id == null)
                 {
                     return NotFound();
@@ -54,14 +62,18 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-
+                if (mdp != null)
+                {
+                    ViewData["messageMdp"] = "Mot de passe rénitialiser avec succès";
+                }
+                ViewData["Id"] = personnel.Id;
                 return View(personnel);
             }
         }
 
 
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             var user = HttpContext.Session.GetString("_useradmin");
             if (user == null)
@@ -70,7 +82,45 @@ namespace CWeb.Controllers
             }
             else
             {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
                 return View();
+            }
+        }
+
+        public async Task<IActionResult> RenitialiseMDP(int? id)
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+
+                var user_action = await _context.Personnel.FirstOrDefaultAsync(m => m.Id == id);
+                if (user_action != null)
+                {
+                    user_action.Password = "1234";
+                    _context.Update(user_action);
+                    await _context.SaveChangesAsync();
+
+                    return new RedirectResult("/Informatique/Details/" + user_action.Id + "?mdp=ok");
+                }
+                else
+                {
+                    return new RedirectResult("/Informatique");
+                }
             }
         }
 
@@ -85,6 +135,14 @@ namespace CWeb.Controllers
             }
             else
             {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+
                 if (ModelState.IsValid)
                 {
                     _context.Add(personnel);
@@ -104,6 +162,14 @@ namespace CWeb.Controllers
             }
             else
             {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+
                 if (id == null)
                 {
                     return NotFound();
@@ -114,13 +180,14 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
+                ViewData["Id"] = personnel.Id;
                 return View(personnel);
             }
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Login,Poste,Nom,Prenom,Telephone,Adresse,Sexe")] Personnel personnel)
+        public async Task<IActionResult> Edit(int id, Personnel personnel)
         {
             var user = HttpContext.Session.GetString("_useradmin");
             if (user == null)
@@ -129,6 +196,14 @@ namespace CWeb.Controllers
             }
             else
             {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+
                 if (id != personnel.Id)
                 {
                     return NotFound();
@@ -154,6 +229,7 @@ namespace CWeb.Controllers
                     }
                     return RedirectToAction(nameof(Index));
                 }
+                ViewData["Id"] = personnel.Id;
                 return View(personnel);
             }
         }
@@ -167,6 +243,14 @@ namespace CWeb.Controllers
             }
             else
             {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+
                 if (id == null)
                 {
                     return NotFound();
@@ -194,6 +278,14 @@ namespace CWeb.Controllers
             }
             else
             {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["POSTE"] = user_verification.Poste;
+
                 var personnel = await _context.Personnel.FindAsync(id);
                 if (personnel != null)
                 {

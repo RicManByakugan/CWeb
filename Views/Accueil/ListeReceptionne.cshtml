@@ -1,14 +1,14 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
-    ViewData["Title"] = "FILE D'ATTENTE";
+    ViewData["Title"] = ViewData["POSTE"];
 }
 @model IEnumerable<Patient>
 
-<div class="w-100 row">
-    <div class="col-md-10 mx-auto">
+<div class="row">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header border-bottom">
-                <h4 class="card-title">FILE D'ATTENTE</h4>
+                <h4 class="card-title">@ViewData["POSTE"]</h4>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -19,8 +19,8 @@
                                 <div class="dash-widget-info text-left d-flex justify-content-between">
                                     <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
                                     <div class="d-flex justify-content-between align-item-center text-white">
-                                        <a asp-controller="Accueil" asp-action="Consultation" asp-route-id="@item.Id" class="small btn-sm btn-outline-success btn ml-1"><i class="fa fa-edit"></i></a>
-                                        <a asp-controller="Accueil" asp-action="Retire" asp-route-id="@item.Id" class="small btn-sm btn-outline-danger btn"><i class="fa fa-times"></i></a>
+                                        <a asp-controller="Accueil" asp-action="Consultation" asp-route-id="@item.Id" class="small btn-sm btn-success btn mr-2"><i class="fa fa-check"></i></a>
+                                        <a asp-controller="Accueil" asp-action="Retire" asp-route-id="@item.Id" class="small btn-sm btn-danger btn"><i class="fa fa-times"></i></a>
                                     </div>
                                 </div>
                             </div>

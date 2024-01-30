@@ -43,7 +43,7 @@ namespace CWeb.Controllers
                     Novalidate = false;
                 }
             }
-            string ticketContent = "Your ticket : " + Ticket;
+            string ticketContent = "Votre ticket : " + Ticket;
             ViewData["message"] = Ticket;
             return View();
         }
@@ -58,6 +58,8 @@ namespace CWeb.Controllers
                 Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2" && m.ResultatConsultation == null).ToListAsync(),
                 Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3" && m.ResultatConsultation == null).ToListAsync()
             };
+            var CountFA = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync();
+            ViewData["CountFA"] = CountFA.Count;
             return View(data);
         }
 
@@ -70,6 +72,8 @@ namespace CWeb.Controllers
                 Accueil1 = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == "OK" && m.Finition == null).ToListAsync(),
             };
             ViewData["service"] = serviceName;
+            var CountFA = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null).ToListAsync();
+            ViewData["CountFA"] = CountFA.Count;
             return View(data);
         }
     }

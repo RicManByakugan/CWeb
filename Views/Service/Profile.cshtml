@@ -6,10 +6,11 @@
 @model Personnel
 
 <div class="row">
-    <div class="col-sm-6 mx-auto">
+    <div class="col-sm-12">
         <div class="card-box">
-            <h1>@Html.DisplayFor(model => model.Poste)</h1>
-            <h3>@Html.DisplayFor(model => model.Nom) @Html.DisplayFor(model => model.Prenom)</h3><hr>
+            <h1>@Html.DisplayFor(model => model.Nom) @Html.DisplayFor(model => model.Prenom)</h1>
+            <h3>@Html.DisplayFor(model => model.Poste)</h3>
+            <hr />
             <table>
                 <tbody>
                     <tr>
@@ -31,6 +32,10 @@
                     <tr>
                         <td>Adresse :</td>
                         <td>@Html.DisplayFor(model => model.Adresse)</td>
+                    </tr>
+                    <tr>
+                        <td>Poste :</td>
+                        <td>@Html.DisplayFor(model => model.Poste)</td>
                     </tr>
                 </tbody>
             </table>

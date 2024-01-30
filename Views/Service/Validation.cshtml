@@ -4,92 +4,98 @@
 }
 @model Patient
 
-<div class="w-100 row">
-    <div class="col-md-10 mx-auto">
+<div class="row">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header border-bottom">
-                <h4 class="card-title">EN ATTENTE</h4>
+                <h4 class="card-title">VALIDATION DE RECEPTION</h4>
             </div>
             <div class="card-body">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Ticket)</td>
-                            <td>@Html.DisplayFor(model => model.Ticket)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Nom)</td>
-                            <td>@Html.DisplayFor(model => model.Nom)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Prenom)</td>
-                            <td>@Html.DisplayFor(model => model.Prenom)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Sexe)</td>
-                            <td>@Html.DisplayFor(model => model.Sexe)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Age)</td>
-                            <td>@Html.DisplayFor(model => model.Age)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Telephone)</td>
-                            <td>@Html.DisplayFor(model => model.Telephone)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Adresse)</td>
-                            <td>@Html.DisplayFor(model => model.Adresse)</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr />
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Accueil)</td>
-                            <td>@Html.DisplayFor(model => model.Accueil)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Service)</td>
-                            <td>@Html.DisplayFor(model => model.Service)</td>
-                        </tr>
-                        <tr>
-                            <td>@Html.DisplayNameFor(model => model.Cout)</td>
-                            <td>@Html.DisplayFor(model => model.Cout) Ar</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-10 mx-auto">
-        <div class="card">
-            <div class="card-body">
-                <form asp-action="Validation" class="w-100">
-                    <input type="hidden" asp-for="Id" />
-                    <input type="hidden" asp-for="Ticket" />
-                    <input type="hidden" asp-for="Receptionne" />
-                    <input type="hidden" asp-for="Accueil" />
-                    <input type="hidden" asp-for="ResultatConsultation" />
-                    <input type="hidden" asp-for="Service" />
-                    <input type="hidden" asp-for="Cout" />
-                    <input type="hidden" asp-for="Nom" />
-                    <input type="hidden" asp-for="Prenom" />
-                    <input type="hidden" asp-for="Sexe" />
-                    <input type="hidden" asp-for="Age" />
-                    <input type="hidden" asp-for="Telephone" />
-                    <input type="hidden" asp-for="Adresse" />
-                    <div class="form-group">
-                        <label asp-for="Finition" class="col-md-3 col-form-label"></label>
-                        <div class="col-md-9">
-                            <input asp-for="Finition" class="form-control" value="OK" readonly />
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Ticket)</td>
+                                        <td>@Html.DisplayFor(model => model.Ticket)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Nom)</td>
+                                        <td>@Html.DisplayFor(model => model.Nom)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Prenom)</td>
+                                        <td>@Html.DisplayFor(model => model.Prenom)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Sexe)</td>
+                                        <td>@Html.DisplayFor(model => model.Sexe)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Age)</td>
+                                        <td>@Html.DisplayFor(model => model.Age)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Telephone)</td>
+                                        <td>@Html.DisplayFor(model => model.Telephone)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Adresse)</td>
+                                        <td>@Html.DisplayFor(model => model.Adresse)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" value="Save" class="btn btn-primary btn-block" />
+                    <div class="col-sm-6">
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Accueil)</td>
+                                        <td>@Html.DisplayFor(model => model.Accueil)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Service)</td>
+                                        <td>@Html.DisplayFor(model => model.Service)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.DisplayNameFor(model => model.Cout)</td>
+                                        <td>@Html.DisplayFor(model => model.Cout) Ar</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-2 card">
+                            <div class="card-body">
+                                <form asp-action="Validation" class="w-100">
+                                    <input type="hidden" asp-for="Id" />
+                                    <input type="hidden" asp-for="Ticket" />
+                                    <input type="hidden" asp-for="Receptionne" />
+                                    <input type="hidden" asp-for="Accueil" />
+                                    <input type="hidden" asp-for="ResultatConsultation" />
+                                    <input type="hidden" asp-for="Service" />
+                                    <input type="hidden" asp-for="Cout" />
+                                    <input type="hidden" asp-for="Nom" />
+                                    <input type="hidden" asp-for="Prenom" />
+                                    <input type="hidden" asp-for="Sexe" />
+                                    <input type="hidden" asp-for="Age" />
+                                    <input type="hidden" asp-for="Telephone" />
+                                    <input type="hidden" asp-for="Adresse" />
+                                    <input asp-for="Finition" hidden class="form-control" value="OK" readonly />
+                                    <table class="table mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="submit" value="Laisser partir" class="btn btn-primary btn-block" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

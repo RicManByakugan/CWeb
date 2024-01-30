@@ -1,6 +1,6 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
-    ViewData["Title"] = "RECEPTIONNE";
+    ViewData["Title"] = ViewData["POSTE"];
 }
 
 @model Patient
@@ -10,6 +10,7 @@
         <div class="card">
             <div class="card-header border-bottom">
                 <h4 class="card-title">TICKET</h4>
+                <small class="text-secondary">(Vérifier le ticket du patient)</small>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -27,7 +28,8 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header border-bottom">
-                <h4 class="card-title">Receptionne</h4>
+                <h4 class="card-title text-uppercase">Receptionne</h4>
+                <small class="text-secondary">(Questionner le patient)</small>
             </div>
             <div class="card-body">
                 <form asp-action="Consultation">
@@ -36,13 +38,13 @@
                     <input type="hidden" asp-for="Receptionne" />
                     <input type="hidden" asp-for="Accueil" />
                     <div class="form-group row">
-                        <label asp-for="ResultatConsultation" class="col-md-3 col-form-label"></label>
+                        <label class="col-md-3 col-form-label">Description</label>
                         <div class="col-md-9">
                             <textarea asp-for="ResultatConsultation" class="form-control"></textarea>
                         </div>
                         <span asp-validation-for="ResultatConsultation" class="text-danger"></span>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row">    
                         <label asp-for="Service" class="col-md-3 col-form-label"></label>
                         <div class="col-md-9">
                             <select asp-for="Service" class="form-control">
@@ -59,6 +61,7 @@
                         </div>
                         <span asp-validation-for="Cout" class="text-danger"></span>
                     </div>
+                    <hr />
                     <div class="form-group row">
                         <label asp-for="Nom" class="col-md-3 col-form-label"></label>
                         <div class="col-md-9">
@@ -105,7 +108,7 @@
                         <span asp-validation-for="Adresse" class="text-danger"></span>
                     </div>
                     <div class="form-group row">
-                        <input type="submit" value="Save" class="btn btn-primary btn-block" />
+                        <input type="submit" value="Enregistrer" class="btn btn-primary btn-block" />
                     </div>
                 </form>
             </div>

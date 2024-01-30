@@ -28,8 +28,10 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
+                var countFA = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync();
                 ViewData["USER"] = user_verification.Nom;
                 ViewData["POSTE"] = user_verification.Poste;
+                ViewData["countFA"] = countFA.Count;
                 return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
             }
         }
@@ -173,6 +175,8 @@ namespace CWeb.Controllers
                         {
                             if (user_verification.Poste == "ACCUEIL 1" || user_verification.Poste == "ACCUEIL 2" || user_verification.Poste == "ACCUEIL 3")
                             {
+                                ViewData["USER"] = user_verification.Nom;
+                                ViewData["POSTE"] = user_verification.Poste;
                                 return View(patient_verification);
                             }
                             else

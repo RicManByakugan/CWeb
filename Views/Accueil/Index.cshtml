@@ -1,14 +1,14 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
-    ViewData["Title"] = "PERSONNEL";
+    ViewData["Title"] = ViewData["POSTE"];
 }
 @model IEnumerable<Patient>
 
-<div class="w-100 row">
-    <div class="col-md-10 mx-auto">
+<div class="row">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header border-bottom">
-                <h4 class="card-title">NON RECUS</h4>
+                <h4 class="card-title text-uppercase">File d'attente (@ViewData["countFA"])</h4>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -20,7 +20,7 @@
                                     <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
                                     <form method="post" action="/Accueil/Receptionne">
                                         <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
-                                        <button class="small btn-sm btn-outline-success btn">File d'attente</button>
+                                        <button class="small btn-sm btn-success btn">Recevoir</button>
                                     </form>
                                 </div>
                             </div>

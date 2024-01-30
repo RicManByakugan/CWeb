@@ -5,16 +5,17 @@
 @model Personnel
 
 <div class="row">
-    <div class="col-md-6 mx-auto">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header border-bottom">
-                <h4 class="card-title">Edit profil</h4>
+                <h4 class="card-title">Modifier votre profil</h4>
             </div>
             <div class="card-body">
                 <form asp-action="EditProfile" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="Id" />
                     <input type="hidden" asp-for="Login" />
+                    <input type="hidden" asp-for="Poste" />
                     <input type="hidden" asp-for="Password" />
                     <div class="form-group">
                         <label asp-for="Nom" class="col-md-3 col-form-label"></label>
@@ -55,7 +56,7 @@
                         <span asp-validation-for="Adresse" class="text-danger"></span>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
                     </div>
                 </form>
             </div>

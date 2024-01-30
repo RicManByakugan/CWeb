@@ -5,60 +5,54 @@
     ViewData["Title"] = "INFORMATIQUE";
 }
 
-<div class="row">
-    <div class="col-sm-4 col-3">
-        <h4 class="page-title">A propos</h4>
-    </div>
-</div>
 
 <div class="row">
-    <div class="col-sm-8 mx-auto">
-        <div class="card">
-            <div class="card-body">
-                <dl class="row">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Login)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Login)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Poste)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Poste)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Nom)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Nom)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Prenom)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Prenom)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Telephone)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Telephone)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Adresse)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Adresse)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Sexe)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Sexe)
-            </dd>
-        </dl>
+    <div class="col-sm-12">
+        <div class="card-box">
+            <h1>@Html.DisplayFor(model => model.Nom) @Html.DisplayFor(model => model.Prenom)</h1>
+            <h3>@Html.DisplayFor(model => model.Poste)</h3>
+            <hr />
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nom :</td>
+                        <td>@Html.DisplayFor(model => model.Nom)</td>
+                    </tr>
+                    <tr>
+                        <td>Prenom :</td>
+                        <td>@Html.DisplayFor(model => model.Prenom)</td>
+                    </tr>
+                    <tr>
+                        <td>Sexe :</td>
+                        <td>@Html.DisplayFor(model => model.Sexe)</td>
+                    </tr>
+                    <tr>
+                        <td>Telephone :</td>
+                        <td>@Html.DisplayFor(model => model.Telephone)</td>
+                    </tr>
+                    <tr>
+                        <td>Adresse :</td>
+                        <td>@Html.DisplayFor(model => model.Adresse)</td>
+                    </tr>
+                    <tr>
+                        <td>Poste :</td>
+                        <td>@Html.DisplayFor(model => model.Poste)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <small class="text-success"> @ViewData["messageMdp"]</small>
+            <hr />
+            <div class="row">
+                <div class="col-sm-4">
+                    <a class="btn btn-success btn-block" asp-action="Edit" asp-route-id="@ViewData["Id"]">Modifier</a>
+                </div>
+                <div class="col-sm-4">
+                    <a class="btn btn-primary btn-block" asp-controller="Informatique" asp-route-id="@ViewData["Id"]" asp-action="RenitialiseMDP">Rénitialiser MDP</a>
+                </div>
+                <div class="col-sm-4">
+                    <a class="btn btn-danger btn-block" asp-action="Delete" asp-route-id="@ViewData["Id"]">Supprimer</a>
+                </div>
             </div>
         </div>
     </div>

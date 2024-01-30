@@ -15,17 +15,16 @@
     <link rel="stylesheet" type="text/css" href="~/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="~/css/style.css">
 </head>
-<body>
+<body style="overflow: hidden;">
     <div class="main-custom-back">
         <div class="w-100 row">
             <div class="col-md-4">
                 <div class="mt-3 card">
                     <div class="card-header border-bottom">
-                        <h4 class="card-title">WAITING</h4>
+                        <h4 class="card-title">FILE D'ATTENTE (@ViewData["CountFA"])</h4>
                     </div>
                     <div class="card-body content-slider-width">
                         <div class="row">
-                            
                             @foreach (var item in Model.Attente)
                             {
                                 <div class="col-xl-4">
@@ -108,5 +107,10 @@
     <script src="~/js/jquery-3.2.1.min.js"></script>
     <script src="~/js/popper.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        setInterval(function () {
+            location.reload();
+        }, 5000);
+    </script>
 </body>
 </html>

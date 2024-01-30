@@ -107,7 +107,7 @@ namespace CWeb.Controllers
                 }
                 ViewData["USER"] = user_verification.Nom;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Patient.Where(m => m.ReceptionneService == "OK" && m.Accueil == user_verification.Poste && m.Finition == null).ToListAsync());
+                return View(await _context.Patient.Where(m => m.ReceptionneService == "OK" && m.Service == user_verification.Poste && m.Finition == null).ToListAsync());
             }
         }
 
@@ -167,22 +167,22 @@ namespace CWeb.Controllers
                 {
                     if (id != null)
                     {
-                        var patient_verification = await _context.Patient.FirstOrDefaultAsync(m => m.Id == id && m.Nom == null && m.Prenom == null);
+                        var patient_verification = await _context.Patient.FirstOrDefaultAsync(m => m.Id == id);
                         if (patient_verification != null)
                         {
                             patient_verification.ReceptionneService = null;
                             _context.Update(patient_verification);
                             await _context.SaveChangesAsync();
-                            return new RedirectResult("/Accueil/ListeReceptionne");
+                            return new RedirectResult("/Service/ListeReceptionne");
                         }
                         else
                         {
-                            return new RedirectResult("/Accueil");
+                            return new RedirectResult("/Service");
                         }
                     }
                     else
                     {
-                        return new RedirectResult("/Accueil");
+                        return new RedirectResult("/Service");
                     }
                 }
                 else
@@ -210,8 +210,10 @@ namespace CWeb.Controllers
                         if (patient_verification != null)
                         {
                             if (user_verification.Poste != "INFORMATIQUE" || user_verification.Poste != "ACCUEIL 1" || user_verification.Poste != "ACCUEIL 2" || user_verification.Poste != "ACCUEIL 3")
-                                {
-                                    return View(patient_verification);
+                            {
+                                ViewData["USER"] = user_verification.Nom;
+                                ViewData["POSTE"] = user_verification.Poste;
+                                return View(patient_verification);
                             }
                             else
                             {
@@ -220,12 +222,12 @@ namespace CWeb.Controllers
                         }
                         else
                         {
-                            return new RedirectResult("/Accueil");
+                            return new RedirectResult("/Service");
                         }
                     }
                     else
                     {
-                        return new RedirectResult("/Accueil");
+                        return new RedirectResult("/Service");
                     }
                 }
                 else

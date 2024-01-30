@@ -60,7 +60,7 @@ namespace CWeb.Controllers
             }
             else
             {
-                ViewData["message"] = "Connexion refused";
+                ViewData["message"] = "Connexion refusée";
                 return View();
             }
         }
