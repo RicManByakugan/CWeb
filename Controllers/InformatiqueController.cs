@@ -1,5 +1,6 @@
 ﻿using CWeb.Data;
 using CWeb.Models;
+using CWeb.Tools;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -71,6 +72,70 @@ namespace CWeb.Controllers
             }
         }
 
+        public async Task<IActionResult> EditProfilePassword()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Nom;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(user_verification);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditProfilePassword(Personnel personnel)
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                string oldpassword = HttpContext.Request.Form["oldpassword"];
+                string newpassword = HttpContext.Request.Form["newpassword"];
+                string newpassword2 = HttpContext.Request.Form["newpassword2"];
+                if (newpassword == newpassword2)
+                {
+                    VarDump.Dump(personnel);
+                    if (personnel.Password == oldpassword)
+                    {
+                        ViewData["USER"] = personnel.Nom;
+                        ViewData["POSTE"] = personnel.Poste;
+                        personnel.Password = newpassword;
+                        _context.Update(personnel);
+                        await _context.SaveChangesAsync();
+                        ViewData["messageReussie"] = "Effectuer";
+                        return View(personnel);
+                    }
+                    else
+                    {
+                        ViewData["USER"] = personnel.Nom;
+                        ViewData["POSTE"] = personnel.Poste;
+                        ViewData["message"] = "Ancien mot de passe incorrect";
+                        return View(personnel);
+                    }
+                }
+                else
+                {
+                    ViewData["USER"] = personnel.Nom;
+                    ViewData["POSTE"] = personnel.Poste;
+                    ViewData["message"] = "Deux mot de passe incorrect";
+                    return View(personnel);
+                }
+
+            }
+        }
 
 
         public async Task<IActionResult> Create()

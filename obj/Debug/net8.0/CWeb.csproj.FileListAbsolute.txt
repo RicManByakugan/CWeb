@@ -263,4 +263,3 @@ F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\CWeb.sourcelink.
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutAccueil.cshtml.rz.scp.css
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutService.cshtml.rz.scp.css
 F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutInfo.cshtml.rz.scp.css
-F:\ITU\M2\COURS\Projet .Net\Clinique\CWeb\CWeb\bin\Debug\net8.0\itext.commons.dll
