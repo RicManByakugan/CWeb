@@ -50,40 +50,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/EditProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXEVkaXRQcm9maWxlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/EditProfilePassword.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXEVkaXRQcm9maWxlUGFzc3dvcmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Informatique/Profile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpcXVlXFByb2ZpbGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/EditProfilePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxFZGl0UHJvZmlsZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Management/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlbWVudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/ITU/M2/COURS/Projet .Net/Clinique/CWeb/CWeb/Views/Patient/FileAccueil.cshtml]

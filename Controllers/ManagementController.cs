@@ -6,11 +6,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CWeb.Controllers
 {
-    public class InformatiqueController : Controller
+    public class ManagementController : Controller
     {
         private readonly CWebDbContext _context;
-        public InformatiqueController(CWebDbContext context)
+        private readonly StringFunctionCustom stringcustom;
+
+        public ManagementController(CWebDbContext context)
         {
+            stringcustom = new StringFunctionCustom();
             _context = context;
         }
         public async Task<IActionResult> Index()
@@ -108,11 +111,11 @@ namespace CWeb.Controllers
                 if (newpassword == newpassword2)
                 {
                     VarDump.Dump(personnel);
-                    if (personnel.Password == oldpassword)
+                    if (personnel.Password == stringcustom.HashString(oldpassword))
                     {
                         ViewData["USER"] = personnel.Nom;
                         ViewData["POSTE"] = personnel.Poste;
-                        personnel.Password = newpassword;
+                        personnel.Password = stringcustom.HashString(newpassword);
                         _context.Update(personnel);
                         await _context.SaveChangesAsync();
                         ViewData["messageReussie"] = "Effectuer";
@@ -158,36 +161,6 @@ namespace CWeb.Controllers
             }
         }
 
-        public async Task<IActionResult> RenitialiseMDP(int? id)
-        {
-            var user = HttpContext.Session.GetString("_useradmin");
-            if (user == null)
-            {
-                return new RedirectResult("/Login");
-            }
-            else
-            {
-                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
-                if (user_verification == null)
-                {
-                    return NotFound();
-                }
-
-                var user_action = await _context.Personnel.FirstOrDefaultAsync(m => m.Id == id);
-                if (user_action != null)
-                {
-                    user_action.Password = "1234";
-                    _context.Update(user_action);
-                    await _context.SaveChangesAsync();
-
-                    return new RedirectResult("/Informatique/Details/" + user_action.Id + "?mdp=ok");
-                }
-                else
-                {
-                    return new RedirectResult("/Informatique");
-                }
-            }
-        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -210,11 +183,43 @@ namespace CWeb.Controllers
 
                 if (ModelState.IsValid)
                 {
+                    personnel.Password = stringcustom.HashString(personnel.Password);
                     _context.Add(personnel);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
                 return View(personnel);
+            }
+        }
+
+        public async Task<IActionResult> RenitialiseMDP(int? id)
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+
+                var user_action = await _context.Personnel.FirstOrDefaultAsync(m => m.Id == id);
+                if (user_action != null)
+                {
+                    user_action.Password = stringcustom.HashString("1234");
+                    _context.Update(user_action);
+                    await _context.SaveChangesAsync();
+
+                    return new RedirectResult("/Management/Details/" + user_action.Id + "?mdp=ok");
+                }
+                else
+                {
+                    return new RedirectResult("/Management");
+                }
             }
         }
 

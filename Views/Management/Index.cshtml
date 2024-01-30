@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<CWeb.Models.Personnel>
 @{
     Layout = "~/Views/Shared/_LayoutInfo.cshtml";
-    ViewData["Title"] = "INFORMATIQUE";
+    ViewData["Title"] = "MANAGEMENT";
 }
 
 <div class="row">
@@ -41,7 +41,7 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr onclick="window.location = '/Informatique/Details/' + @item.Id;">
+                                <tr onclick="window.location = '/Management/Details/' + @item.Id;">
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Login)
                                     </td>

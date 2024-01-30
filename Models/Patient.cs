@@ -7,6 +7,7 @@ namespace CWeb.Models
     {
         public int Id { get; set; }
         public string? Ticket { get; set; }
+        public DateTime CreatedDate { get; set; }
         public string? Receptionne { get; set; }
         public string? Accueil { get; set; }
         public string? ResultatConsultation { get; set; }

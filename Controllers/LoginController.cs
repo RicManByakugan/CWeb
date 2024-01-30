@@ -1,5 +1,6 @@
 ﻿using CWeb.Data;
 using CWeb.Models;
+using CWeb.Tools;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,10 +8,12 @@ namespace CWeb.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly CWebDbContext _context;
+        private readonly CWebDbContext _context; 
+        private readonly StringFunctionCustom stringcustom; 
         public LoginController(CWebDbContext context) 
         { 
             _context = context;
+            stringcustom = new StringFunctionCustom();
         }
 
         public IActionResult Index()
@@ -32,15 +35,15 @@ namespace CWeb.Controllers
             string name = HttpContext.Request.Form["name"];
             string password = HttpContext.Request.Form["password"];
 
-            var perso = await _context.Personnel.FirstOrDefaultAsync(m => m.Login == name && m.Password == password);
+            var perso = await _context.Personnel.FirstOrDefaultAsync(m => m.Login == name && m.Password == stringcustom.HashString(password));
             if (perso != null)
             {
-                if (perso.Poste == "INFORMATIQUE")
+                if (perso.Poste == "MANAGEMENT")
                 {
                     HttpContext.Session.Remove("_useradmin");
                     HttpContext.Session.SetString("_useradmin", perso.Id.ToString());
                     ViewData["message"] = "Connected";
-                    return new RedirectResult("/Informatique");
+                    return new RedirectResult("/Management");
                 }
                 else if (perso.Poste == "ACCUEIL 1" || perso.Poste == "ACCUEIL 2" || perso.Poste == "ACCUEIL 3")
                 {

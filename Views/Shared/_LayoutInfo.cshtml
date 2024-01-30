@@ -13,7 +13,7 @@
     <div class="main-wrapper">
         <div class="header">
             <div class="header-left">
-                <a asp-controller="Informatique" asp-action="Index" class="logo">
+                <a asp-controller="Management" asp-action="Index" class="logo">
                     <img src="~/img/logo.png" width="35" height="35" alt=""> <span>CWeb</span>
                 </a>
             </div>
@@ -25,20 +25,20 @@
                         <span>@ViewData["USER"]</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a asp-controller="Informatique" asp-action="Profile" class="dropdown-item">Profile</a>
-                        <a asp-controller="Informatique" asp-action="EditProfile" class="dropdown-item">Modification</a>
-                        <a asp-controller="Informatique" asp-action="EditProfilePassword" class="dropdown-item">Mot de passe</a>
-                        <a asp-controller="Informatique" asp-action="Logout" class="dropdown-item">Deconnexion</a>
+                        <a asp-controller="Management" asp-action="Profile" class="dropdown-item">Profile</a>
+                        <a asp-controller="Management" asp-action="EditProfile" class="dropdown-item">Modification</a>
+                        <a asp-controller="Management" asp-action="EditProfilePassword" class="dropdown-item">Mot de passe</a>
+                        <a asp-controller="Management" asp-action="Logout" class="dropdown-item">Deconnexion</a>
                     </div>
                 </li>
             </ul>
             <div class="dropdown mobile-user-menu float-right">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a asp-controller="Informatique" asp-action="Profile" class="dropdown-item">Profile</a>
-                    <a asp-controller="Informatique" asp-action="EditProfile" class="dropdown-item">Modification</a>
-                    <a asp-controller="Informatique" asp-action="EditProfilePassword" class="dropdown-item">Mot de passe</a>
-                    <a asp-controller="Informatique" asp-action="Logout" class="dropdown-item">Deconnexion</a>
+                    <a asp-controller="Management" asp-action="Profile" class="dropdown-item">Profile</a>
+                    <a asp-controller="Management" asp-action="EditProfile" class="dropdown-item">Modification</a>
+                    <a asp-controller="Management" asp-action="EditProfilePassword" class="dropdown-item">Mot de passe</a>
+                    <a asp-controller="Management" asp-action="Logout" class="dropdown-item">Deconnexion</a>
                 </div>
             </div>
         </div>
@@ -49,10 +49,10 @@
                     <ul>
                         <li class="menu-title">Personnel</li>
                         <li>
-                            <a asp-controller="Informatique" asp-action="Create"><span>Nouveau</span></a>
+                            <a asp-controller="Management" asp-action="Create"><span>Nouveau</span></a>
                         </li>
                         <li>
-                            <a asp-controller="Informatique" asp-action="Index"><span>Membre</span></a>
+                            <a asp-controller="Management" asp-action="Index"><span>Membre</span></a>
                         </li>
                     </ul>
                 </div>

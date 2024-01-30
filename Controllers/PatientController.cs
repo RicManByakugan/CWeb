@@ -38,6 +38,7 @@ namespace CWeb.Controllers
                 else
                 {
                     patient.Ticket = Ticket;
+                    patient.CreatedDate = DateTime.Now;
                     _context.Add(patient);
                     await _context.SaveChangesAsync();
                     Novalidate = false;
