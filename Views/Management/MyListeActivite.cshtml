@@ -1,0 +1,56 @@
+﻿@model IEnumerable<CWeb.Models.Activite>
+@{
+    Layout = "~/Views/Shared/_LayoutInfo.cshtml";
+    ViewData["Title"] = "MANAGEMENT";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title pb-0">Mon activite</h1><hr />
+            </div>
+            <div class="pt-0 card-body">
+                <div class="table-responsive">
+                    <table class="table table-border table-hover  mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase">
+                                    Date
+                                </th>
+                                <th class="text-uppercase">
+                                    Description
+                                </th>
+                                <th class="text-uppercase">
+                                    Nom du Concerner
+                                </th class="text-uppercase">
+                                <th class="text-uppercase">
+                                    Prénom du Concerner
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CreatedDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Descirption)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cible)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CiblePrenom)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

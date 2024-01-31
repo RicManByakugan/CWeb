@@ -22,12 +22,14 @@
             <ul class="nav user-menu float-right">
                 <li class="nav-item dropdown has-arrow">
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+                            <img class="rounded-circle" src="~/img/user.jpg" width="40" alt="Admin">
+                            <span class="status online"></span>
+                        </span>
                         <span>@ViewData["USER"]</span>
                     </a>
                     <div class="dropdown-menu">
                         <a asp-controller="Management" asp-action="Profile" class="dropdown-item">Profile</a>
-                        <a asp-controller="Management" asp-action="EditProfile" class="dropdown-item">Modification</a>
-                        <a asp-controller="Management" asp-action="EditProfilePassword" class="dropdown-item">Mot de passe</a>
                         <a asp-controller="Management" asp-action="Logout" class="dropdown-item">Deconnexion</a>
                     </div>
                 </li>
@@ -36,8 +38,6 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a asp-controller="Management" asp-action="Profile" class="dropdown-item">Profile</a>
-                    <a asp-controller="Management" asp-action="EditProfile" class="dropdown-item">Modification</a>
-                    <a asp-controller="Management" asp-action="EditProfilePassword" class="dropdown-item">Mot de passe</a>
                     <a asp-controller="Management" asp-action="Logout" class="dropdown-item">Deconnexion</a>
                 </div>
             </div>
@@ -47,12 +47,32 @@
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
-                        <li class="menu-title">Personnel</li>
+                        <li class="menu-title text-uppercase">@ViewData["POSTE"]</li>
                         <li>
-                            <a asp-controller="Management" asp-action="Create"><span>Nouveau</span></a>
+                            <a asp-controller="Management" asp-action="Create"><i class="fa fa-plus"></i><span>Nouveau</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class=""><i class="fa fa-user"></i> <span> Personnel</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a asp-controller="Management" asp-action="Index">Tout</a></li>
+                                <li><a asp-controller="Management" asp-action="AccueilListe">Accueil</a></li>
+                                <li><a asp-controller="Management" asp-action="ServiceListe">Service</a></li>
+                                <li><a asp-controller="Management" asp-action="ManagementListe">Management</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a asp-controller="Management" asp-action="MyListeActivite"><i class="fa fa-bar-chart"></i> <span>Mon activite</span></a>
                         </li>
                         <li>
-                            <a asp-controller="Management" asp-action="Index"><span>Membre</span></a>
+                            <a asp-controller="Management" asp-action="ListeActivite"><i class="fa fa-sort"></i> <span>Tout activite</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class=""><i class="fa fa-cog"></i> <span> Paramètre</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a asp-controller="Management" asp-action="EditProfile">Profil</a></li>
+                                <li><a asp-controller="Management" asp-action="EditProfilePassword">Mot de passe</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

@@ -30,13 +30,111 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View(await _context.Personnel.ToListAsync());
             }
         }
 
+        public async Task<IActionResult> ManagementListe()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Personnel.Where(m => m.Poste == "MANAGEMENT").ToListAsync());
+            }
+        }
 
+        public async Task<IActionResult> AccueilListe()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Personnel.Where(m => m.Poste == "ACCUEIL 1" || m.Poste == "ACCUEIL 2" || m.Poste == "ACCUEIL 3").ToListAsync());
+            }
+        }
+
+        public async Task<IActionResult> ServiceListe()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Personnel.Where(m => m.Poste != "ACCUEIL 1" && m.Poste != "ACCUEIL 2" && m.Poste != "ACCUEIL 3" && m.Poste != "MANAGEMENT").ToListAsync());
+            }
+        }
+
+        public async Task<IActionResult> ListeActivite()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Acitivite.ToListAsync());
+            }
+        }
+
+        public async Task<IActionResult> MyListeActivite()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Acitivite.Where(m => m.Admin == user_verification.Nom && m.AdminPrenom == user_verification.Prenom).ToListAsync());
+            }
+        }
 
         public async Task<IActionResult> Details(int? id, string? mdp)
         {
@@ -52,7 +150,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
 
                 if (id == null)
@@ -89,7 +187,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View(user_verification);
             }
@@ -131,7 +229,7 @@ namespace CWeb.Controllers
                 }
                 else
                 {
-                    ViewData["USER"] = personnel.Nom;
+                    ViewData["USER"] = personnel.Login;
                     ViewData["POSTE"] = personnel.Poste;
                     ViewData["message"] = "Deux mot de passe incorrect";
                     return View(personnel);
@@ -139,7 +237,6 @@ namespace CWeb.Controllers
 
             }
         }
-
 
         public async Task<IActionResult> Create()
         {
@@ -155,12 +252,11 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View();
             }
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -178,11 +274,22 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
 
                 if (ModelState.IsValid)
                 {
+                    Activite activite = new Activite();
+                    activite.Admin = user_verification.Nom;
+                    activite.AdminPrenom = user_verification.Prenom; 
+                    activite.AdminPoste = user_verification.Poste; 
+                    activite.Descirption = "AJOUT NOUVEAU PERSONNEL";
+                    activite.Cible = personnel.Nom;
+                    activite.CiblePrenom = personnel.Prenom;
+                    activite.CreatedDate = DateTime.Now;
+                    _context.Add(activite);
+                    await _context.SaveChangesAsync();
+
                     personnel.Password = stringcustom.HashString(personnel.Password);
                     _context.Add(personnel);
                     await _context.SaveChangesAsync();
@@ -210,6 +317,17 @@ namespace CWeb.Controllers
                 var user_action = await _context.Personnel.FirstOrDefaultAsync(m => m.Id == id);
                 if (user_action != null)
                 {
+                    Activite activite = new Activite();
+                    activite.Admin = user_verification.Nom;
+                    activite.AdminPrenom = user_verification.Prenom;
+                    activite.AdminPoste = user_verification.Poste;
+                    activite.Descirption = "RENITIALISE MOT DE PASSE";
+                    activite.Cible = user_action.Nom;
+                    activite.CiblePrenom = user_action.Prenom;
+                    activite.CreatedDate = DateTime.Now;
+                    _context.Add(activite);
+                    await _context.SaveChangesAsync();
+
                     user_action.Password = stringcustom.HashString("1234");
                     _context.Update(user_action);
                     await _context.SaveChangesAsync();
@@ -237,7 +355,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
 
                 if (id == null)
@@ -266,13 +384,6 @@ namespace CWeb.Controllers
             }
             else
             {
-                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
-                if (user_verification == null)
-                {
-                    return NotFound();
-                }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
-                ViewData["POSTE"] = user_verification.Poste;
 
                 if (id != personnel.Id)
                 {
@@ -283,6 +394,22 @@ namespace CWeb.Controllers
                 {
                     try
                     {
+                        var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                        if (user_verification == null)
+                        {
+                            return NotFound();
+                        }
+                        Activite activite = new Activite();
+                        activite.Admin = user_verification.Nom;
+                        activite.AdminPrenom = user_verification.Prenom;
+                        activite.AdminPoste = user_verification.Poste;
+                        activite.Descirption = "MISE A JOUR PERSONNEL";
+                        activite.Cible = personnel.Nom;
+                        activite.CiblePrenom = personnel.Prenom;
+                        activite.CreatedDate = DateTime.Now;
+                        _context.Add(activite);
+                        await _context.SaveChangesAsync();
+
                         _context.Update(personnel);
                         await _context.SaveChangesAsync();
                     }
@@ -318,7 +445,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
 
                 if (id == null)
@@ -353,12 +480,23 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom + " " + user_verification.Prenom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
 
                 var personnel = await _context.Personnel.FindAsync(id);
                 if (personnel != null)
                 {
+                    Activite activite = new Activite();
+                    activite.Admin = user_verification.Nom;
+                    activite.AdminPrenom = user_verification.Prenom;
+                    activite.AdminPoste = user_verification.Poste;
+                    activite.Descirption = "SUPPRESSION PERSONNEL";
+                    activite.Cible = personnel.Nom;
+                    activite.CiblePrenom = personnel.Prenom;
+                    activite.CreatedDate = DateTime.Now;
+                    _context.Add(activite);
+                    await _context.SaveChangesAsync();
+
                     _context.Personnel.Remove(personnel);
                 }
 

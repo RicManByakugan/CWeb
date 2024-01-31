@@ -29,7 +29,7 @@ namespace CWeb.Controllers
                     return NotFound();
                 }
                 var countFA = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync();
-                ViewData["USER"] = user_verification.Nom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 ViewData["countFA"] = countFA.Count;
                 return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
@@ -50,7 +50,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View(user_verification);
             }
@@ -70,7 +70,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View(user_verification);
             }
@@ -94,7 +94,7 @@ namespace CWeb.Controllers
                     VarDump.Dump(personnel);
                     if (personnel.Password == oldpassword)
                     {
-                        ViewData["USER"] = personnel.Nom;
+                        ViewData["USER"] = personnel.Login;
                         ViewData["POSTE"] = personnel.Poste;
                         personnel.Password = newpassword;
                         _context.Update(personnel);
@@ -104,7 +104,7 @@ namespace CWeb.Controllers
                     }
                     else
                     {
-                        ViewData["USER"] = personnel.Nom;
+                        ViewData["USER"] = personnel.Login;
                         ViewData["POSTE"] = personnel.Poste;
                         ViewData["message"] = "Ancien mot de passe incorrect";
                         return View(personnel);
@@ -112,7 +112,7 @@ namespace CWeb.Controllers
                 }
                 else
                 {
-                    ViewData["USER"] = personnel.Nom;
+                    ViewData["USER"] = personnel.Login;
                     ViewData["POSTE"] = personnel.Poste;
                     ViewData["message"] = "Deux mot de passe incorrect";
                     return View(personnel);
@@ -135,7 +135,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View(user_verification);
             }
@@ -156,7 +156,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = personnel.Nom;
+                ViewData["USER"] = personnel.Login;
                 ViewData["POSTE"] = personnel.Poste;
                 _context.Update(personnel);
                 await _context.SaveChangesAsync();
@@ -178,7 +178,7 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["USER"] = user_verification.Nom;
+                ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 return View(await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == user_verification.Poste && m.Nom == null).ToListAsync());
             }
@@ -245,7 +245,7 @@ namespace CWeb.Controllers
                         {
                             if (user_verification.Poste == "ACCUEIL 1" || user_verification.Poste == "ACCUEIL 2" || user_verification.Poste == "ACCUEIL 3")
                             {
-                                ViewData["USER"] = user_verification.Nom;
+                                ViewData["USER"] = user_verification.Login;
                                 ViewData["POSTE"] = user_verification.Poste;
                                 return View(patient_verification);
                             }

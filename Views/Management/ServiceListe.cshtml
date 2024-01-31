@@ -8,7 +8,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h1 class="card-title pb-0">Tout les personnels</h1><hr />
+                <h1 class="card-title pb-0">Services</h1><hr />
             </div>
             <div class="pt-0 card-body">
                 <div class="row doctor-grid">
@@ -19,7 +19,7 @@
                                 <div class="doctor-img">
                                     <a class="avatar" asp-action="Details" asp-route-id="@item.Id"><img alt="" src="~/img/user.jpg"></a>
                                 </div>
-                                <h4 class="doctor-name text-ellipsis"> <span class="status offline"></span> <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Nom) @Html.DisplayFor(modelItem => item.Prenom)</a></h4>
+                                <h4 class="doctor-name text-ellipsis"><a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Nom) @Html.DisplayFor(modelItem => item.Prenom)</a></h4>
                                 <div class="doc-prof">@Html.DisplayFor(modelItem => item.Poste)</div>
                                 <hr />
                                 <div class="text-left user-country">
