@@ -19,7 +19,16 @@
                                 <div class="doctor-img">
                                     <a class="avatar" asp-action="Details" asp-route-id="@item.Id"><img alt="" src="~/img/user.jpg"></a>
                                 </div>
-                                <h4 class="doctor-name text-ellipsis"><a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Nom) @Html.DisplayFor(modelItem => item.Prenom)</a></h4>
+                                <h4 class="doctor-name text-ellipsis"><a asp-action="Details" asp-route-id="@item.Id">
+                                    @if (item.Status == null)
+                                    {
+                                        <span class="status offline"></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="status online"></span>
+                                    }
+                                    @Html.DisplayFor(modelItem => item.Nom) @Html.DisplayFor(modelItem => item.Prenom)</a></h4>
                                 <div class="doc-prof">@Html.DisplayFor(modelItem => item.Poste)</div>
                                 <hr />
                                 <div class="text-left user-country">

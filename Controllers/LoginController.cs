@@ -43,6 +43,9 @@ namespace CWeb.Controllers
                     HttpContext.Session.Remove("_useradmin");
                     HttpContext.Session.SetString("_useradmin", perso.Id.ToString());
                     ViewData["message"] = "Connected";
+                    perso.Status = "OK";
+                    _context.Update(perso);
+                    await _context.SaveChangesAsync();
                     return new RedirectResult("/Management");
                 }
                 else if (perso.Poste == "ACCUEIL 1" || perso.Poste == "ACCUEIL 2" || perso.Poste == "ACCUEIL 3")
@@ -50,6 +53,9 @@ namespace CWeb.Controllers
                     HttpContext.Session.Remove("_user");
                     HttpContext.Session.SetString("_user", perso.Id.ToString());
                     ViewData["message"] = "Connected";
+                    perso.Status = "OK";
+                    _context.Update(perso);
+                    await _context.SaveChangesAsync();
                     return new RedirectResult("/Accueil");
 
                 }
@@ -58,6 +64,9 @@ namespace CWeb.Controllers
                     HttpContext.Session.Remove("_userservice");
                     HttpContext.Session.SetString("_userservice", perso.Id.ToString());
                     ViewData["message"] = "Connected";
+                    perso.Status = "OK";
+                    _context.Update(perso);
+                    await _context.SaveChangesAsync();
                     return new RedirectResult("/Service");
                 }
             }

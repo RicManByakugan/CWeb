@@ -3,6 +3,7 @@ using CWeb.Models;
 using CWeb.Tools;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 
 namespace CWeb.Controllers
 {
@@ -132,7 +133,7 @@ namespace CWeb.Controllers
                 }
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Acitivite.Where(m => m.Admin == user_verification.Nom && m.AdminPrenom == user_verification.Prenom).ToListAsync());
+                return View(await _context.Acitivite.Where(m => m.Admin == user_verification.Nom && m.AdminPrenom == user_verification.Prenom).OrderByDescending(m => m.CreatedDate).ToListAsync());
             }
         }
 
@@ -576,8 +577,17 @@ namespace CWeb.Controllers
             }
         }
 
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
+            var user = HttpContext.Session.GetString("_useradmin");
+            var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+            if (user_verification == null)
+            {
+                return NotFound();
+            }
+            user_verification.Status = null;
+            _context.Update(user_verification);
+            await _context.SaveChangesAsync();
             HttpContext.Session.Remove("_useradmin");
             return new RedirectResult("/Accueil");
         }

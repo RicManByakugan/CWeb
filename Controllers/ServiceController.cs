@@ -328,8 +328,17 @@ namespace CWeb.Controllers
             }
         }
 
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
+            var user = HttpContext.Session.GetString("_userservice");
+            var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+            if (user_verification == null)
+            {
+                return NotFound();
+            }
+            user_verification.Status = null;
+            _context.Update(user_verification);
+            await _context.SaveChangesAsync();
             HttpContext.Session.Remove("_userservice");
             return new RedirectResult("/Accueil");
         }
