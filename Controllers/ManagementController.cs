@@ -52,7 +52,19 @@ namespace CWeb.Controllers
                 }
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View();
+
+				var today = DateTime.Now.Date;
+				var data = new DataFileSerivce
+				{
+					GENERALE = await _context.Patient.Where(m => m.Service == "CONSULTATION DE MEDECINE GENERALE" && m.CreatedDate.Date == today).ToListAsync(),
+					MATERNITE = await _context.Patient.Where(m => m.Service == "MATERNITE" && m.CreatedDate.Date == today).ToListAsync(),
+					VACCINATION = await _context.Patient.Where(m => m.Service == "VACCINATION" && m.CreatedDate.Date == today).ToListAsync(),
+					PEDIATRIE = await _context.Patient.Where(m => m.Service == "PEDIATRIE" && m.CreatedDate.Date == today).ToListAsync(),
+					BLOCOPERATOIR = await _context.Patient.Where(m => m.Service == "BLOC OPERATOIRE" && m.CreatedDate.Date == today).ToListAsync(),
+					DENTAIRE = await _context.Patient.Where(m => m.Service == "DENTAIRE" && m.CreatedDate.Date == today).ToListAsync(),
+				    
+				};
+				return View(data);
             }
         }
         public async Task<IActionResult> SuivieAccueil()
