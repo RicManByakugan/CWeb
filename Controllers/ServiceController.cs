@@ -27,9 +27,10 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
+                var today = DateTime.Now.Date;
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Patient.Where(m => m.ReceptionneService == null && m.Service == user_verification.Poste).ToListAsync());
+                return View(await _context.Patient.Where(m => m.ReceptionneService == null && m.Service == user_verification.Poste && m.CreatedDate.Date == today).ToListAsync());
             }
         }
 
@@ -170,9 +171,10 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
+                var today = DateTime.Now.Date;
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Patient.Where(m => m.ReceptionneService == "OK" && m.Service == user_verification.Poste && m.Finition == null).ToListAsync());
+                return View(await _context.Patient.Where(m => m.ReceptionneService == "OK" && m.Service == user_verification.Poste && m.Finition == null && m.CreatedDate.Date == today).ToListAsync());
             }
         }
 

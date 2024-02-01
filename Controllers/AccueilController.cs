@@ -28,11 +28,12 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                var countFA = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync();
+                var today = DateTime.Now.Date;
+                var countFA = await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync();
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
                 ViewData["countFA"] = countFA.Count;
-                return View(await _context.Patient.Where(m => m.Receptionne == null).ToListAsync());
+                return View(await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync());
             }
         }
 
@@ -178,9 +179,10 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
+                var today = DateTime.Now.Date;
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == user_verification.Poste && m.Nom == null).ToListAsync());
+                return View(await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == user_verification.Poste && m.Nom == null && m.CreatedDate.Date == today).ToListAsync());
             }
         }
 

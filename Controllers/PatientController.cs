@@ -30,7 +30,7 @@ namespace CWeb.Controllers
             
             while (Novalidate)
             {
-                IEnumerable<Patient> verification = await _context.Patient.Where(m => m.Ticket == Ticket).ToListAsync();
+                IEnumerable<Patient> verification = await _context.Patient.Where(m => m.Ticket == Ticket && m.Finition != "OK").ToListAsync();
                 if (verification != null && verification.Any())
                 {
                     Novalidate = true;
@@ -52,14 +52,15 @@ namespace CWeb.Controllers
 
         public async Task<IActionResult> FileAccueil()
         {
+            var today = DateTime.Now.Date;
             var data = new DataFileAccueil
             {
-                Attente = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync(),
-                Accueil1 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 1" && m.ResultatConsultation == null).ToListAsync(),
-                Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2" && m.ResultatConsultation == null).ToListAsync(),
-                Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3" && m.ResultatConsultation == null).ToListAsync()
+                Attente = await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync(),
+                Accueil1 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 1" && m.ResultatConsultation == null && m.CreatedDate.Date == today).ToListAsync(),
+                Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2" && m.ResultatConsultation == null && m.CreatedDate.Date == today).ToListAsync(),
+                Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3" && m.ResultatConsultation == null && m.CreatedDate.Date == today).ToListAsync()
             };
-            var CountFA = await _context.Patient.Where(m => m.Receptionne == null).ToListAsync();
+            var CountFA = await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync();
             ViewData["CountFA"] = CountFA.Count;
             return View(data);
         }
@@ -67,13 +68,14 @@ namespace CWeb.Controllers
         [Route("Patient/FileService/{serviceName}")]
         public async Task<IActionResult> FileService(string serviceName)
         {
+            var today = DateTime.Now.Date;
             var data = new DataFileAccueil
             {
-                Attente = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null).ToListAsync(),
-                Accueil1 = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == "OK" && m.Finition == null).ToListAsync(),
+                Attente = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null && m.CreatedDate.Date == today).ToListAsync(),
+                Accueil1 = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == "OK" && m.Finition == null && m.CreatedDate.Date == today).ToListAsync(),
             };
             ViewData["service"] = serviceName;
-            var CountFA = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null).ToListAsync();
+            var CountFA = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null && m.CreatedDate.Date == today).ToListAsync();
             ViewData["CountFA"] = CountFA.Count;
             return View(data);
         }
