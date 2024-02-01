@@ -48,7 +48,7 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li class="menu-title text-uppercase">@ViewData["POSTE"]</li>
-                       
+                        <li><a asp-controller="Service" asp-action="FileAttente"><i class="fa fa-home"></i> <span>File d'attente</span></a></li>
                         <li class="submenu">
                             <a href="#" class="">
                                 <i class="fa fa-wheelchair"></i>
@@ -57,6 +57,13 @@
                             <ul style="display: none;">
                                 <li><a asp-controller="Service" asp-action="ListeReceptionne" class="text-uppercase">@ViewData["POSTE"]</a></li>
                                 <li><a asp-controller="Service" asp-action="FileAttente" class="text-uppercase">File d'attente</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class=""><i class="fa fa-line-chart"></i> <span> Tout activité</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a asp-controller="Service" asp-action="StatistiqueAll">Chiffre d'affaire</a></li>
+                                <li><a asp-controller="Service" asp-action="PatientRecuJourneyAll">Patient reçus</a></li>
                             </ul>
                         </li>
                         <li class="submenu">

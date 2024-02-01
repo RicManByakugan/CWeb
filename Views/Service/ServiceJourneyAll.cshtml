@@ -1,0 +1,140 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutInfo.cshtml";
+    ViewData["Title"] = ViewData["POSTE"];
+
+    decimal Sone = 0;
+    decimal STwo = 0;
+    decimal SThree = 0;
+    decimal SFour = 0;
+    decimal SFive = 0;
+    decimal SSix = 0;
+
+    var totalCount = Model.Count();
+
+    if (totalCount > 0)
+    {
+        Sone = Math.Round((decimal)Model.Count(m => m.Service == "CONSULTATION DE MEDECINE GENERALE") / totalCount * 100, 2);
+        STwo = Math.Round((decimal)Model.Count(m => m.Service == "BLOC OPERATOIRE") / totalCount * 100, 2);
+        SThree = Math.Round((decimal)Model.Count(m => m.Service == "MATERNITE") / totalCount * 100, 2);
+        SFour = Math.Round((decimal)Model.Count(m => m.Service == "VACCINATION") / totalCount * 100, 2);
+        SFive = Math.Round((decimal)Model.Count(m => m.Service == "PEDIATRIE") / totalCount * 100, 2);
+        SSix = Math.Round((decimal)Model.Count(m => m.Service == "DENTAIRE") / totalCount * 100, 2);
+    }
+
+}
+
+@functions {
+    public string TestBg(decimal valeur)
+    {
+        if (valeur < 10)
+        {
+            return "bg-warning";
+        }
+        else if (valeur < 40)
+        {
+            return "bg-secondary";
+        }
+        else if (valeur < 60)
+        {
+            return "bg-primary";
+        }
+        else if (valeur < 100)
+        {
+            return "bg-success";
+        }
+        else
+        {
+            return "";
+        }
+    }
+}
+
+@model IEnumerable<Patient>
+
+<div class="card">
+    <div class="card-header border-bottom">
+        <h4 class="card-title text-uppercase">Service</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                <div class="dash-widget">
+                    <span class="dash-widget-bg1 @TestBg(Math.Round(Sone, 0))">
+                        <h3 class="p-0 m-0" style="display: contents;">
+                            @Math.Round(Sone, 0)%
+                        </h3>
+                    </span>
+                    <div class="dash-widget-info text-right">
+                        <h3>@Model.Count(m => m.Service == "CONSULTATION DE MEDECINE GENERALE")</h3>
+                        <span class="widget-title1 @TestBg(Math.Round(Sone, 0))">MEDECINE GENERALE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                <div class="dash-widget">
+                    <span class="dash-widget-bg1 @TestBg(Math.Round(STwo, 0))">
+                        <h3 class="p-0 m-0" style="display: contents;">
+                            @Math.Round(STwo, 0)%
+                        </h3>
+                    </span>
+                    <div class="dash-widget-info text-right">
+                        <h3>@Model.Count(m => m.Service == "BLOC OPERATOIRE")</h3>
+                        <span class="widget-title1 @TestBg(Math.Round(STwo, 0))">BLOC OPERATOIRE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                <div class="dash-widget">
+                    <span class="dash-widget-bg1 @TestBg(Math.Round(SThree, 0))">
+                        <h3 class="p-0 m-0" style="display: contents;">
+                            @Math.Round(SThree, 0)%
+                        </h3>
+                    </span>
+                    <div class="dash-widget-info text-right">
+                        <h3>@Model.Count(m => m.Service == "MATERNITE")</h3>
+                        <span class="widget-title1 @TestBg(Math.Round(SThree, 0))">MATERNITE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                <div class="dash-widget">
+                    <span class="dash-widget-bg1 @TestBg(Math.Round(SFour, 0))">
+                        <h3 class="p-0 m-0" style="display: contents;">
+                            @Math.Round(SFour, 0)%
+                        </h3>
+                    </span>
+                    <div class="dash-widget-info text-right">
+                        <h3>@Model.Count(m => m.Service == "VACCINATION")</h3>
+                        <span class="widget-title1 @TestBg(Math.Round(SFour, 0))">VACCINATION</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                <div class="dash-widget">
+                    <span class="dash-widget-bg1 @TestBg(Math.Round(SFive, 0))">
+                        <h3 class="p-0 m-0" style="display: contents;">
+                            @Math.Round(SFive, 0)%
+                        </h3>
+                    </span>
+                    <div class="dash-widget-info text-right">
+                        <h3>@Model.Count(m => m.Service == "PEDIATRIE")</h3>
+                        <span class="widget-title1 @TestBg(Math.Round(SFive, 0))">PEDIATRIE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                <div class="dash-widget">
+                    <span class="dash-widget-bg1 @TestBg(Math.Round(SSix, 0))">
+                        <h3 class="p-0 m-0" style="display: contents;">
+                            @Math.Round(SSix, 0)%
+                        </h3>
+                    </span>
+                    <div class="dash-widget-info text-right">
+                        <h3>@Model.Count(m => m.Service == "DENTAIRE")</h3>
+                        <span class="widget-title1 @TestBg(Math.Round(SSix, 0))">DENTAIRE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

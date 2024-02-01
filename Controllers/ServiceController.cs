@@ -54,7 +54,67 @@ namespace CWeb.Controllers
 			}
 		}
 
-		public async Task<IActionResult> Profile()
+        public async Task<IActionResult> StatistiqueAll()
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Patient.Where(m => m.ReceptionneService != null && m.Service == user_verification.Poste).OrderByDescending(m => m.CreatedDate).ToListAsync());
+            }
+        }
+
+        public async Task<IActionResult> ServiceJourneyAll()
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Patient.Where(m => m.ReceptionneService != null && m.Service == user_verification.Poste).OrderByDescending(m => m.CreatedDate).ToListAsync());
+            }
+        }
+
+        public async Task<IActionResult> PatientRecuJourneyAll()
+        {
+            var user = HttpContext.Session.GetString("_userservice");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View(await _context.Patient.Where(m => m.ReceptionneService != null && m.Service == user_verification.Poste).OrderByDescending(m => m.CreatedDate).ToListAsync());
+            }
+        }
+
+        public async Task<IActionResult> Profile()
         {
             var user = HttpContext.Session.GetString("_userservice");
             if (user == null)

@@ -1,0 +1,58 @@
+﻿@model DataFileAccueil
+
+@{
+	Layout = "~/Views/Shared/_LayoutInfo.cshtml";
+	ViewData["Title"] = "PATIENT";
+}
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-header">
+				<h1 class="card-title pb-0">Suivie Accueil : @DateTime.Today.ToString("dd/MM/yyyy")</h1><hr />
+			</div>
+			<div class="pt-0 card-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table class="table table-striped custom-table">
+								<thead>
+									<tr>
+										<th>Numéro de l'accueil</th>
+										<th>Nom</th>
+										<th>Prénom</th>
+										<th>Status</th>
+										<th>Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>I</td>
+										<td>@ViewData["ACCUEIL1NOM"]</td>
+										<td>@ViewData["ACCUEIL1PRENOM"]</td>
+										<td><span class="custom-badge status-green">Payé <i class="fa fa-check"></i></span></td>
+										<td>@Model.Accueil1.Sum(m => m.Cout) Ar</td>
+									</tr>
+									<tr>
+										<td>II</td>
+										<td>@ViewData["ACCUEIL2NOM"]</td>
+										<td>@ViewData["ACCUEIL2PRENOM"]</td>
+										<td><span class="custom-badge status-green">Payé <i class="fa fa-check"></i></span></td>
+										<td>@Model.Accueil2.Sum(m => m.Cout) Ar</td>
+									</tr>
+									<tr>
+										<td>III</td>
+										<td>@ViewData["ACCUEIL3NOM"]</td>
+										<td>@ViewData["ACCUEIL3PRENOM"]</td>
+										<td><span class="custom-badge status-green">Payé <i class="fa fa-check"></i></span></td>
+										<td>@Model.Accueil3.Sum(m => m.Cout) Ar</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

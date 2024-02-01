@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutService.cshtml";
+    ViewData["Title"] = ViewData["POSTE"];
+
+}
+
+@functions {
+    public string TestBg(decimal valeur)
+    {
+        if (valeur < 10)
+        {
+            return "bg-warning";
+        }
+        else if (valeur < 40)
+        {
+            return "bg-secondary";
+        }
+        else if (valeur < 60)
+        {
+            return "bg-primary";
+        }
+        else if (valeur < 100)
+        {
+            return "bg-success";
+        }
+        else
+        {
+            return "";
+        }
+    }
+}
+
+@model IEnumerable<Patient>
+
+<div class="card">
+    <div class="card-header border-bottom">
+        <h4 class="card-title text-uppercase">Patient recus (@Model.Count())</h4>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Sexe</th>
+                        <th>Telephone</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        @if (item.Sexe == "HOMME")
+                        {
+                            <tr class="table-primary">
+                                <td><span class="custom-badge status-blue">@item.Service</span></td>
+                                <td>@item.ResultatConsultation</td>
+                                <td>@item.Nom</td>
+                                <td>@item.Prenom</td>
+                                <td>@item.Sexe</td>
+                                <td>@item.Telephone</td>
+                                <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr class="table-danger">
+                                <td><span class="custom-badge status-blue">@item.Service</span></td>
+                                <td>@item.ResultatConsultation</td>
+                                <td>@item.Nom</td>
+                                <td>@item.Prenom</td>
+                                <td>@item.Sexe</td>
+                                <td>@item.Telephone</td>
+                                <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

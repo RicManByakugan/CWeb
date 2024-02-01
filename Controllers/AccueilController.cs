@@ -57,7 +57,7 @@ namespace CWeb.Controllers
 			}
 		}
 
-		public async Task<IActionResult> Statistique()
+		public async Task<IActionResult> PDFJourney()
 		{
 			var user = HttpContext.Session.GetString("_user");
 			if (user == null)
@@ -78,7 +78,28 @@ namespace CWeb.Controllers
 			}
 		}
 
-        public async Task<IActionResult> StatistiqueAll()
+		public async Task<IActionResult> Statistique()
+		{
+			var user = HttpContext.Session.GetString("_user");
+			if (user == null)
+			{
+				return new RedirectResult("/Login");
+			}
+			else
+			{
+				var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+				if (user_verification == null)
+				{
+					return NotFound();
+				}
+				var today = DateTime.Now.Date;
+				ViewData["USER"] = user_verification.Login;
+				ViewData["POSTE"] = user_verification.Poste;
+				return View(await _context.Patient.Where(m => m.Receptionne != null && m.Service != null && m.Accueil == user_verification.Poste && m.CreatedDate.Date == today).OrderByDescending(m => m.CreatedDate).ToListAsync());
+			}
+		}
+
+		public async Task<IActionResult> StatistiqueAll()
         {
             var user = HttpContext.Session.GetString("_user");
             if (user == null)

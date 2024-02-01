@@ -67,7 +67,7 @@ namespace CWeb.Controllers
                     perso.Status = "OK";
                     _context.Update(perso);
                     await _context.SaveChangesAsync();
-                    return new RedirectResult("/Service");
+                    return new RedirectResult("/Service/FileAttente");
                 }
             }
             else

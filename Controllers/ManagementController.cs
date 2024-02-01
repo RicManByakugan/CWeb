@@ -36,6 +36,65 @@ namespace CWeb.Controllers
                 return View();
             }
         }
+        public async Task<IActionResult> SuivieSevice()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+                return View();
+            }
+        }
+        public async Task<IActionResult> SuivieAccueil()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
+
+				var userAccueil1 = await _context.Personnel.FirstOrDefaultAsync(m => m.Poste == "ACCUEIL 1");
+				var userAccueil2 = await _context.Personnel.FirstOrDefaultAsync(m => m.Poste == "ACCUEIL 2");
+				var userAccueil3 = await _context.Personnel.FirstOrDefaultAsync(m => m.Poste == "ACCUEIL 3");
+				ViewData["ACCUEIL1NOM"] = userAccueil1.Nom;
+				ViewData["ACCUEIL1PRENOM"] = userAccueil1.Prenom;
+				ViewData["ACCUEIL2NOM"] = userAccueil2.Nom;
+				ViewData["ACCUEIL2PRENOM"] = userAccueil2.Prenom;
+				ViewData["ACCUEIL3NOM"] = userAccueil3.Nom;
+				ViewData["ACCUEIL3PRENOM"] = userAccueil3.Prenom;
+
+				var today = DateTime.Now.Date;
+                var data = new DataFileAccueil
+                {
+                    Attente = await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync(),
+                    Accueil1 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 1" && m.ResultatConsultation != null && m.CreatedDate.Date == today).ToListAsync(),
+                    Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2" && m.ResultatConsultation != null && m.CreatedDate.Date == today).ToListAsync(),
+                    Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3" && m.ResultatConsultation != null && m.CreatedDate.Date == today).ToListAsync()
+                };
+
+                return View(data);
+            }
+        }
+        
 
         public async Task<IActionResult> AllPersonnel()
         {

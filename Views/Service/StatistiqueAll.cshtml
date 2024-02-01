@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
+    Layout = "~/Views/Shared/_LayoutService.cshtml";
     ViewData["Title"] = ViewData["POSTE"];
 }
 
@@ -7,8 +7,7 @@
 
 <div class="card">
     <div class="card-header border-bottom">
-        <a asp-controller="Accueil" asp-action="PDFJourney" class="btn btn-primary float-right">PDF</a>
-        <h4 class="card-title text-uppercase">@DateTime.Today.ToString("dd/MM/yyyy") : @Model.Sum(m => m.Cout) Ar</h4>
+        <h4 class="card-title text-uppercase">Tout : @Model.Sum(m => m.Cout) Ar</h4>
     </div>
     <div class="card-body">
         <div class="row">
@@ -34,7 +33,7 @@
                                     <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
                                     <td>@item.Nom</td>
                                     <td>@item.Service</td>
-                                    <td><span class="custom-badge status-green">Payé <i class="fa fa-check"></i></span></td>
+                                    <td><span class="custom-badge status-green">Payé</span></td>
                                 </tr>
                             }
                         </tbody>

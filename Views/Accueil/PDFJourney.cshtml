@@ -1,0 +1,116 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
+    ViewData["Title"] = ViewData["POSTE"];
+}
+
+@model IEnumerable<Patient>
+
+<div class="row">
+    <div class="col-sm-5 col-4">
+        <h4 class="page-title">Facture de la journée</h4>
+    </div>
+    <div class="col-sm-7 col-8 text-right m-b-30">
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-primary" onclick="PrintPDF()"><i class="fa fa-print mr-1"></i> Imprimer</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card" id="PDFPrinterId">
+            <div class="card-body">
+                <div class="row custom-invoice">
+                    <div class="col-6 col-sm-6 m-b-20">
+                        <img src="~/img/logo-dark.png" class="inv-logo" alt="">
+                        <ul class="list-unstyled">
+                            <li>Clinique Ambohidratrimo</li>
+                            <li>42 Ambohidratrimo</li>
+                            <li>Antananarivo 105</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-6 m-b-20">
+                        <div class="invoice-details">
+                            <h3 class="text-uppercase" id="userPosteId">@ViewData["POSTE"]</h3>
+                            <ul class="list-unstyled">
+                                <li>Date: <span>@DateTime.Now.Date.ToString("dd-MM-yyyy")</span></li>
+                                <li>Heure: <span>@DateTime.Now.ToString("hh:mm")</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ticket</th>
+                                <th>Service</th>
+                                <th>Description</th>
+                                <th>Montant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Ticket</td>
+                                    <td>@item.Service</td>
+                                    <td>@item.ResultatConsultation</td>
+                                    <td>@item.Cout Ar</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row invoice-payment">
+                    <div class="col-sm-7">
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="m-b-20">
+                            <div class="table-responsive no-border">
+                                <table class="table mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <th></th>
+                                            <th>Total:</th>
+                                            <th></th>
+                                            <td class="text-left"><b>@Model.Sum(m => m.Cout) Ar</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="invoice-info">
+                        <h5>Règlement</h5>
+                        <p class="text-muted">Toute les factures de la journée doivent être livrer dans la direction des finances au plus tard le 21h de la journée. Merci.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/pdf/jquery.min.js"></script>
+<script src="~/pdf/jszip.min.js"></script>
+<script src="~/pdf/kendo.all.min.js"></script>
+<script>
+    function PrintPDF() {
+        var today = new Date();
+        var annee = today.getFullYear();
+        var mois = today.getMonth() + 1;
+        var jour = today.getDate();
+        var ticketdate = jour + "-" + mois + "-" + annee;
+        kendo.drawing
+            .drawDOM("#PDFPrinterId",
+                {
+                    paperSize: "A2",
+                    margin: { top: "1cm", bottom: "1cm" },
+                    scale: 0.8,
+                    height: 500
+                })
+            .then(function (group) {
+                    kendo.drawing.pdf.saveAs(group, $('#userPosteId').text() + "-TICKET-" + ticketdate + ".pdf");
+            });
+    }
+</script>
