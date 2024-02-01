@@ -27,14 +27,34 @@ namespace CWeb.Controllers
                 {
                     return NotFound();
                 }
-                var today = DateTime.Now.Date;
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
-                return View(await _context.Patient.Where(m => m.ReceptionneService == null && m.Service == user_verification.Poste && m.CreatedDate.Date == today).ToListAsync());
+                return View();
             }
         }
 
-        public async Task<IActionResult> Profile()
+		public async Task<IActionResult> FileAttente()
+		{
+			var user = HttpContext.Session.GetString("_userservice");
+			if (user == null)
+			{
+				return new RedirectResult("/Login");
+			}
+			else
+			{
+				var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+				if (user_verification == null)
+				{
+					return NotFound();
+				}
+				var today = DateTime.Now.Date;
+				ViewData["USER"] = user_verification.Login;
+				ViewData["POSTE"] = user_verification.Poste;
+				return View(await _context.Patient.Where(m => m.ReceptionneService == null && m.Service == user_verification.Poste && m.CreatedDate.Date == today).ToListAsync());
+			}
+		}
+
+		public async Task<IActionResult> Profile()
         {
             var user = HttpContext.Session.GetString("_userservice");
             if (user == null)

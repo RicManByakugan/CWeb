@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CWeb.Models.Personnel>
+@{
+    Layout = "~/Views/Shared/_LayoutInfo.cshtml";
+    ViewData["Title"] = "MANAGEMENT";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title pb-0">Tout les personnels</h1><hr />
+            </div>
+            <div class="pt-0 card-body">
+                <div class="row doctor-grid">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 col-sm-4  col-lg-3">
+                            <div class="profile-widget">
+                                <div class="doctor-img">
+                                    <a class="avatar" asp-action="Details" asp-route-id="@item.Id"><img alt="" src="~/img/user.jpg"></a>
+                                </div>
+                                <h4 class="doctor-name text-ellipsis">
+                                    @if (item.Status == null)
+                                    {
+                                        <span class="status offline"></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="status online"></span>
+                                    }
+                                    <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Nom) @Html.DisplayFor(modelItem => item.Prenom)</a>
+                                </h4>
+                                <div class="doc-prof">@Html.DisplayFor(modelItem => item.Poste)</div>
+                                <hr />
+                                <div class="text-left user-country">
+                                    <i class="fa fa-map-marker"></i> @Html.DisplayFor(modelItem => item.Adresse) <br />
+                                    <i class="fa fa-phone"></i> @Html.DisplayFor(modelItem => item.Telephone)
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

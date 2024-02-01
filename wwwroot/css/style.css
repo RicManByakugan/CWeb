@@ -1106,11 +1106,11 @@ textarea.form-control {
 	display: block;
 	font-size: 50px;
 	text-align: center;
-	line-height: 65px;
+	/* line-height: 65px; */
 	background: #009efb;
 	border-radius: 50%;
 	font-size: 40px;
-	height: 65px;
+	height: 66px;
 }
 .dash-widget-bg2 {
 	width: 65px;

@@ -4,43 +4,14 @@
     ViewData["Title"] = "MANAGEMENT";
 }
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <h1 class="card-title pb-0">Tout les personnels</h1><hr />
-            </div>
-            <div class="pt-0 card-body">
-                <div class="row doctor-grid">
-                    @foreach (var item in Model)
-                    {
-                        <div class="col-md-4 col-sm-4  col-lg-3">
-                            <div class="profile-widget">
-                                <div class="doctor-img">
-                                    <a class="avatar" asp-action="Details" asp-route-id="@item.Id"><img alt="" src="~/img/user.jpg"></a>
-                                </div>
-                                <h4 class="doctor-name text-ellipsis">
-                                    @if (item.Status == null)
-                                    {
-                                        <span class="status offline"></span>
-                                    }
-                                    else
-                                    {
-                                        <span class="status online"></span>
-                                    }
-                                    <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Nom) @Html.DisplayFor(modelItem => item.Prenom)</a>
-                                </h4>
-                                <div class="doc-prof">@Html.DisplayFor(modelItem => item.Poste)</div>
-                                <hr />
-                                <div class="text-left user-country">
-                                    <i class="fa fa-map-marker"></i> @Html.DisplayFor(modelItem => item.Adresse) <br />
-                                    <i class="fa fa-phone"></i> @Html.DisplayFor(modelItem => item.Telephone)
-                                </div>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="w-100 d-flex justify-content-center align-items-center">
+	<div class="w-100 card-box text-center">
+		<img src="~/img/logo.png" width="200" height="200" alt="" style="background-color: #009efb;">
+		<hr />
+		<div class="mt-2 text-center">
+			<h1>CWEB</h1>
+			<h3 class="mt-2 mb-1 text-secondary">Clinique Gestion</h3>
+			<small class="mb-0 text-secondary">Copyright 2024 | Version 1.0</small>
+		</div>
+	</div>
 </div>

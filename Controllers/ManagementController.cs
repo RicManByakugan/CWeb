@@ -33,6 +33,26 @@ namespace CWeb.Controllers
                 }
                 ViewData["USER"] = user_verification.Login;
                 ViewData["POSTE"] = user_verification.Poste;
+                return View();
+            }
+        }
+
+        public async Task<IActionResult> AllPersonnel()
+        {
+            var user = HttpContext.Session.GetString("_useradmin");
+            if (user == null)
+            {
+                return new RedirectResult("/Login");
+            }
+            else
+            {
+                var user_verification = await _context.Personnel.FirstOrDefaultAsync(m => m.Id.ToString() == user);
+                if (user_verification == null)
+                {
+                    return NotFound();
+                }
+                ViewData["USER"] = user_verification.Login;
+                ViewData["POSTE"] = user_verification.Poste;
                 return View(await _context.Personnel.ToListAsync());
             }
         }

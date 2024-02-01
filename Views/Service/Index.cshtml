@@ -2,32 +2,16 @@
     Layout = "~/Views/Shared/_LayoutService.cshtml";
     ViewData["Title"] = "PERSONNEL";
 }
-@model IEnumerable<Patient>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header border-bottom">
-                <h4 class="card-title">FILE D'ATTENTE</h4>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    @foreach (var item in Model)
-                    {
-                        <div class="col-xl-4">
-                            <div class="bg-info dash-widget">
-                                <div class="dash-widget-info text-left d-flex justify-content-between">
-                                    <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
-                                    <form method="post" action="/Service/Receptionne">
-                                        <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
-                                        <button class="small btn-sm btn-success btn">Recevoir</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
+
+<div class="w-100 d-flex justify-content-center align-items-center">
+	<div class="w-100 card-box text-center">
+		<img src="~/img/logo.png" width="200" height="200" alt="" style="background-color: #009efb;">
+		<hr />
+		<div class="mt-2 text-center">
+			<h1>CWEB</h1>
+			<h3 class="mt-2 mb-1 text-secondary">Clinique Gestion</h3>
+			<small class="mb-0 text-secondary">Copyright 2024 | Version 1.0</small>
+		</div>
+	</div>
 </div>

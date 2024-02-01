@@ -55,7 +55,23 @@
                             </a>
                             <ul style="display: none;">
                                 <li><a asp-controller="Accueil" asp-action="ListeReceptionne" class="text-uppercase">@ViewData["POSTE"]</a></li>
-                                <li><a asp-controller="Accueil" asp-action="Index" class="text-uppercase">File d'attente</a></li>
+                                <li><a asp-controller="Accueil" asp-action="FileAttente" class="text-uppercase">File d'attente</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class=""><i class="fa fa-ticket"></i> <span> Journée</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a asp-controller="Accueil" asp-action="Statistique">Chiffre d'affaire</a></li>
+                                <li><a asp-controller="Accueil" asp-action="ServiceJourney">Service</a></li>
+                                <li><a asp-controller="Accueil" asp-action="PatientRecuJourney">Patient reçus</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class=""><i class="fa fa-line-chart"></i> <span> Tout activité</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a asp-controller="Accueil" asp-action="StatistiqueAll">Chiffre d'affaire</a></li>
+                                <li><a asp-controller="Accueil" asp-action="ServiceJourneyAll">Service</a></li>
+                                <li><a asp-controller="Accueil" asp-action="PatientRecuJourneyAll">Patient reçus</a></li>
                             </ul>
                         </li>
                         <li class="submenu">

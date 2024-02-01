@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutService.cshtml";
+    ViewData["Title"] = "PERSONNEL";
+}
+@model IEnumerable<Patient>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <h4 class="card-title">FILE D'ATTENTE</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-xl-4">
+                            <div class="bg-info dash-widget">
+                                <div class="dash-widget-info text-left d-flex justify-content-between">
+                                    <h3 class="mb-0 d-flex justify-content-between align-item-center text-white">@item.Ticket</h3>
+                                    <form method="post" action="/Service/Receptionne">
+                                        <input type="text" name="idpatient" id="idpatient" hidden value="@Html.DisplayFor(modelItem => item.Id)" />
+                                        <button class="small btn-sm btn-success btn">Recevoir</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

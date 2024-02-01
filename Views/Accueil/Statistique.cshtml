@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAccueil.cshtml";
+    ViewData["Title"] = ViewData["POSTE"];
+}
+
+@model IEnumerable<Patient>
+
+<div class="card">
+    <div class="card-header border-bottom">
+        <a href="appointments.html" class="btn btn-primary float-right">PDF</a>
+        <h4 class="card-title text-uppercase">@DateTime.Today.ToString("dd-MM-yyyy") : @Model.Sum(m => m.Cout) Ar</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table mb-0">
+                        <thead>
+                            <tr>
+                                <th>Montant</th>
+                                <th>Ticket</th>
+                                <th>Date</th>
+                                <th>Nom</th>
+                                <th>Service</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td><span class="custom-badge status-blue">@item.Cout Ar</span></td>
+                                    <td>@item.Ticket</td>
+                                    <td>@item.CreatedDate.ToString("dd-MM-yyyy")</td>
+                                    <td>@item.Nom</td>
+                                    <td>@item.Service</td>
+                                    <td><span class="custom-badge status-green">Payé</span></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
