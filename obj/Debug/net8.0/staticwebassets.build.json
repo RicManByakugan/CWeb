@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mw2Gb+QIjP1j7cVflrZlj6LhbA/nlUAFUnzccXyP/h4=",
+  "Hash": "fioJBhUwJk0xbt5Zqn8dIlzUn3TaU3XIWNiE+fMTitk=",
   "Source": "CWeb",
   "BasePath": "_content/CWeb",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CWeb\\wwwroot",
       "Source": "CWeb",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Identity": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js"
+      "OriginalItemSpec": "C:\\Users\\Ratovonirina\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CWeb.styles.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CWeb.styles.css",
       "SourceId": "CWeb",
       "SourceType": "Computed",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "CWeb.styles.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CWeb.styles.css"
+      "OriginalItemSpec": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CWeb.styles.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CWeb.bundle.scp.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CWeb.bundle.scp.css",
       "SourceId": "CWeb",
       "SourceType": "Computed",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "CWeb.bundle.scp.css",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CWeb.bundle.scp.css"
+      "OriginalItemSpec": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CWeb.bundle.scp.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap-datetimepicker.min.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap-datetimepicker.min.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/bootstrap-datetimepicker.min.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap-datetimepicker.min.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/bootstrap.min.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\dataTables.bootstrap4.min.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\dataTables.bootstrap4.min.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/dataTables.bootstrap4.min.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\dataTables.bootstrap4.min.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\font-awesome.min.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\font-awesome.min.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/font-awesome.min.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\font-awesome.min.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\fullcalendar.min.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\fullcalendar.min.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/fullcalendar.min.css",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\css\\fullcalendar.min.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\select2.min.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\select2.min.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/select2.min.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\select2.min.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\style.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\style.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\tagsinput.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\tagsinput.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "css/tagsinput.css",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\css\\tagsinput.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\favicon.ico",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\favicon.ico",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.eot",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.eot",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "fonts/fontawesome-webfont3e6e.eot",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont3e6e.eot"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.html",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.html",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "fonts/fontawesome-webfont3e6e.html",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont3e6e.html"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.svg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.svg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "fonts/fontawesome-webfont3e6e.svg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont3e6e.svg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.ttf",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.ttf",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "fonts/fontawesome-webfont3e6e.ttf",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont3e6e.ttf"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.woff",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.woff",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "fonts/fontawesome-webfont3e6e.woff",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont3e6e.woff"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfontd41d.eot",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfontd41d.eot",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "fonts/fontawesome-webfontd41d.eot",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfontd41d.eot"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\attachment.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\attachment.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/attachment.png",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\img\\attachment.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-01.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-01.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-01.jpg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-01.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-02.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-02.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-02.jpg",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-02.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-03.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-03.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-03.jpg",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-03.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-04.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-04.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-04.jpg",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-04.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-01.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-01.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-thumb-01.jpg",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-thumb-01.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-02.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-02.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-thumb-02.jpg",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-thumb-02.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-03.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-03.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-thumb-03.jpg",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-thumb-03.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-04.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-04.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/blog/blog-thumb-04.jpg",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-thumb-04.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\calander.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\calander.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/calander.png",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\img\\calander.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\clock.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\clock.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/clock.png",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\img\\clock.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-03.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-03.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-03.jpg",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-03.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-01.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-01.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-01.jpg",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-01.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-02.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-02.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-02.jpg",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-02.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-03.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-03.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-03.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-03.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-04.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-04.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-04.jpg",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-04.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-05.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-05.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-05.jpg",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-05.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-06.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-06.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-06.jpg",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-06.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-07.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-07.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-07.jpg",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-07.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-08.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-08.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-08.jpg",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-08.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-09.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-09.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-09.jpg",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-09.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-10.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-10.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-10.jpg",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-10.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-11.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-11.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-11.jpg",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-11.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-12.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-12.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/doctor-thumb-12.jpg",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\img\\doctor-thumb-12.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\favicon.ico",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\favicon.ico",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/favicon.ico",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\img\\favicon.ico"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo-dark.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo-dark.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/logo-dark.png",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo-dark.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-01.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-01.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/patient-thumb-01.jpg",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\img\\patient-thumb-01.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-02.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-02.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/patient-thumb-02.jpg",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\img\\patient-thumb-02.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder-thumb.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder-thumb.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/placeholder-thumb.jpg",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\img\\placeholder-thumb.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/placeholder.jpg",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\img\\placeholder.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\sent.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\sent.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/sent.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\img\\sent.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-02.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-02.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/user-02.jpg",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\img\\user-02.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-03.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-03.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/user-03.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\img\\user-03.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-04.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-04.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/user-04.jpg",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\img\\user-04.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-05.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-05.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/user-05.jpg",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\img\\user-05.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-06.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-06.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/user-06.jpg",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\img\\user-06.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/user.jpg",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\img\\user.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\video-call.jpg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\video-call.jpg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "img/video-call.jpg",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\video-call.jpg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\app.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\app.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/app.js",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\js\\app.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap-datetimepicker.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap-datetimepicker.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/bootstrap-datetimepicker.min.js",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap-datetimepicker.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\Chart.bundle.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\Chart.bundle.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/Chart.bundle.js",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\js\\Chart.bundle.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\chart.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\chart.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/chart.js",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\js\\chart.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\dataTables.bootstrap4.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/dataTables.bootstrap4.min.js",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\js\\dataTables.bootstrap4.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\fullcalendar.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\fullcalendar.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/fullcalendar.min.js",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\js\\fullcalendar.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-3.2.1.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-3.2.1.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/jquery-3.2.1.min.js",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-3.2.1.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-ui.min.html",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-ui.min.html",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/jquery-ui.min.html",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-ui.min.html"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.dataTables.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.dataTables.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/jquery.dataTables.min.js",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.dataTables.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.fullcalendar.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.fullcalendar.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/jquery.fullcalendar.js",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.fullcalendar.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.slimscroll.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.slimscroll.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/jquery.slimscroll.js",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.slimscroll.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\moment.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\moment.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/moment.min.js",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\js\\moment.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\popper.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\popper.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/popper.min.js",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\js\\popper.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\select2.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\select2.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/select2.min.js",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\js\\select2.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\tagsinput.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\tagsinput.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "js/tagsinput.js",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\js\\tagsinput.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jquery.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jquery.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "pdf/jquery.min.js",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\pdf\\jquery.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jszip.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jszip.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "pdf/jszip.min.js",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\pdf\\jszip.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\kendo.all.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\kendo.all.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "pdf/kendo.all.min.js",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\pdf\\kendo.all.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\css\\lightgallery.min.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\css\\lightgallery.min.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/css/lightgallery.min.css",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\css\\lightgallery.min.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd41d.eot",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd41d.eot",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/fonts/lgd41d.eot",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\fonts\\lgd41d.eot"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.eot",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.eot",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/fonts/lgd641.eot",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\fonts\\lgd641.eot"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.svg",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.svg",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/fonts/lgd641.svg",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\fonts\\lgd641.svg"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.ttf",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.ttf",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/fonts/lgd641.ttf",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\fonts\\lgd641.ttf"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.woff",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.woff",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/fonts/lgd641.woff",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\fonts\\lgd641.woff"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\loading.gif",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\loading.gif",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/img/loading.gif",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\img\\loading.gif"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\video-play.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\video-play.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/img/video-play.png",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\img\\video-play.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\vimeo-play.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\vimeo-play.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/img/vimeo-play.png",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\img\\vimeo-play.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\youtube-play.png",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\youtube-play.png",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/img/youtube-play.png",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\img\\youtube-play.png"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\js\\lightgallery-all.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\js\\lightgallery-all.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/light-gallery/js/lightgallery-all.min.js",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\light-gallery\\js\\lightgallery-all.min.js"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.eot",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.eot",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/summernote/dist/font/summernote4c4d.eot",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.eot"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.ttf",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.ttf",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/summernote/dist/font/summernote4c4d.ttf",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.ttf"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.woff",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.woff",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/summernote/dist/font/summernote4c4d.woff",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.woff"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernoted41d.eot",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernoted41d.eot",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/summernote/dist/font/summernoted41d.eot",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\summernote\\dist\\font\\summernoted41d.eot"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.css",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.css",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/summernote/dist/summernote-bs4.css",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\plugins\\summernote\\dist\\summernote-bs4.css"
     },
     {
-      "Identity": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.min.js",
+      "Identity": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.min.js",
       "SourceId": "CWeb",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
+      "ContentRoot": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\",
       "BasePath": "_content/CWeb",
       "RelativePath": "plugins/summernote/dist/summernote-bs4.min.js",
       "AssetKind": "All",

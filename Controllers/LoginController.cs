@@ -36,6 +36,7 @@ namespace CWeb.Controllers
             string password = HttpContext.Request.Form["password"];
 
             var perso = await _context.Personnel.FirstOrDefaultAsync(m => m.Login == name && m.Password == stringcustom.HashString(password));
+            // var perso = await _context.Personnel.FirstOrDefaultAsync(m => m.Login == name && m.Password == password);
             if (perso != null)
             {
                 if (perso.Poste == "MANAGEMENT")

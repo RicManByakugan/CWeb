@@ -87,14 +87,15 @@ namespace CWeb.Controllers
 				var userAccueil1 = await _context.Personnel.FirstOrDefaultAsync(m => m.Poste == "ACCUEIL 1");
 				var userAccueil2 = await _context.Personnel.FirstOrDefaultAsync(m => m.Poste == "ACCUEIL 2");
 				var userAccueil3 = await _context.Personnel.FirstOrDefaultAsync(m => m.Poste == "ACCUEIL 3");
-				ViewData["ACCUEIL1NOM"] = userAccueil1.Nom;
-				ViewData["ACCUEIL1PRENOM"] = userAccueil1.Prenom;
-				ViewData["ACCUEIL2NOM"] = userAccueil2.Nom;
-				ViewData["ACCUEIL2PRENOM"] = userAccueil2.Prenom;
-				ViewData["ACCUEIL3NOM"] = userAccueil3.Nom;
-				ViewData["ACCUEIL3PRENOM"] = userAccueil3.Prenom;
+                ViewData["ACCUEIL1NOM"] = userAccueil1 != null ? userAccueil1.Nom : "Aucune personne";
+                ViewData["ACCUEIL1PRENOM"] = userAccueil1 != null ? userAccueil1.Prenom : "";
+                ViewData["ACCUEIL2NOM"] = userAccueil2 != null ? userAccueil2.Nom : "Aucune personne";
+                ViewData["ACCUEIL2PRENOM"] = userAccueil2 != null ? userAccueil2.Prenom : "";
+                ViewData["ACCUEIL3NOM"] = userAccueil3 != null ? userAccueil3.Nom : "Aucune personne";
+                ViewData["ACCUEIL3PRENOM"] = userAccueil3 != null ? userAccueil3.Prenom : "";
 
-				var today = DateTime.Now.Date;
+
+                var today = DateTime.Now.Date;
                 var data = new DataFileAccueil
                 {
                     Attente = await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync(),

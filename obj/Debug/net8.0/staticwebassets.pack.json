@@ -1,367 +1,367 @@
 {
   "Files": [
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CWeb.bundle.scp.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CWeb.bundle.scp.css",
       "PackagePath": "staticwebassets\\CWeb.bundle.scp.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap-datetimepicker.min.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap-datetimepicker.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-datetimepicker.min.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\dataTables.bootstrap4.min.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\dataTables.bootstrap4.min.css",
       "PackagePath": "staticwebassets\\css\\dataTables.bootstrap4.min.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\font-awesome.min.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\fullcalendar.min.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\fullcalendar.min.css",
       "PackagePath": "staticwebassets\\css\\fullcalendar.min.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\select2.min.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\select2.min.css",
       "PackagePath": "staticwebassets\\css\\select2.min.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\style.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\tagsinput.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\css\\tagsinput.css",
       "PackagePath": "staticwebassets\\css\\tagsinput.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\favicon.ico",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.eot",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.eot",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.eot"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.html",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.html",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.html"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.svg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.svg",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.svg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.ttf",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.ttf",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.ttf"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.woff",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfont3e6e.woff",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.woff"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfontd41d.eot",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\fonts\\fontawesome-webfontd41d.eot",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfontd41d.eot"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\attachment.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\attachment.png",
       "PackagePath": "staticwebassets\\img\\attachment.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-01.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-01.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-01.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-02.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-02.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-02.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-03.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-03.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-03.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-04.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-04.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-04.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-01.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-01.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-thumb-01.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-02.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-02.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-thumb-02.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-03.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-03.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-thumb-03.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-04.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\blog\\blog-thumb-04.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\blog-thumb-04.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\calander.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\calander.png",
       "PackagePath": "staticwebassets\\img\\calander.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\clock.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\clock.png",
       "PackagePath": "staticwebassets\\img\\clock.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-03.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-03.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-03.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-01.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-01.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-01.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-02.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-02.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-02.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-03.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-03.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-03.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-04.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-04.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-04.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-05.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-05.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-05.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-06.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-06.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-06.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-07.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-07.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-07.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-08.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-08.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-08.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-09.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-09.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-09.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-10.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-10.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-10.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-11.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-11.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-11.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-12.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\doctor-thumb-12.jpg",
       "PackagePath": "staticwebassets\\img\\doctor-thumb-12.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\favicon.ico",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\favicon.ico",
       "PackagePath": "staticwebassets\\img\\favicon.ico"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo-dark.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo-dark.png",
       "PackagePath": "staticwebassets\\img\\logo-dark.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-01.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-01.jpg",
       "PackagePath": "staticwebassets\\img\\patient-thumb-01.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-02.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\patient-thumb-02.jpg",
       "PackagePath": "staticwebassets\\img\\patient-thumb-02.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder-thumb.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder-thumb.jpg",
       "PackagePath": "staticwebassets\\img\\placeholder-thumb.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\placeholder.jpg",
       "PackagePath": "staticwebassets\\img\\placeholder.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\sent.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\sent.png",
       "PackagePath": "staticwebassets\\img\\sent.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-02.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-02.jpg",
       "PackagePath": "staticwebassets\\img\\user-02.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-03.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-03.jpg",
       "PackagePath": "staticwebassets\\img\\user-03.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-04.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-04.jpg",
       "PackagePath": "staticwebassets\\img\\user-04.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-05.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-05.jpg",
       "PackagePath": "staticwebassets\\img\\user-05.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-06.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user-06.jpg",
       "PackagePath": "staticwebassets\\img\\user-06.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\user.jpg",
       "PackagePath": "staticwebassets\\img\\user.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\video-call.jpg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\img\\video-call.jpg",
       "PackagePath": "staticwebassets\\img\\video-call.jpg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\Chart.bundle.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\Chart.bundle.js",
       "PackagePath": "staticwebassets\\js\\Chart.bundle.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\app.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\app.js",
       "PackagePath": "staticwebassets\\js\\app.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap-datetimepicker.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap-datetimepicker.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap-datetimepicker.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\chart.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\chart.js",
       "PackagePath": "staticwebassets\\js\\chart.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\dataTables.bootstrap4.min.js",
       "PackagePath": "staticwebassets\\js\\dataTables.bootstrap4.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\fullcalendar.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\fullcalendar.min.js",
       "PackagePath": "staticwebassets\\js\\fullcalendar.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-3.2.1.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-3.2.1.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-3.2.1.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-ui.min.html",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery-ui.min.html",
       "PackagePath": "staticwebassets\\js\\jquery-ui.min.html"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.dataTables.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.dataTables.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.fullcalendar.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.fullcalendar.js",
       "PackagePath": "staticwebassets\\js\\jquery.fullcalendar.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.slimscroll.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\jquery.slimscroll.js",
       "PackagePath": "staticwebassets\\js\\jquery.slimscroll.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\moment.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\moment.min.js",
       "PackagePath": "staticwebassets\\js\\moment.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\popper.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\popper.min.js",
       "PackagePath": "staticwebassets\\js\\popper.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\select2.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\select2.min.js",
       "PackagePath": "staticwebassets\\js\\select2.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\tagsinput.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\js\\tagsinput.js",
       "PackagePath": "staticwebassets\\js\\tagsinput.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jquery.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jquery.min.js",
       "PackagePath": "staticwebassets\\pdf\\jquery.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jszip.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\jszip.min.js",
       "PackagePath": "staticwebassets\\pdf\\jszip.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\kendo.all.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\pdf\\kendo.all.min.js",
       "PackagePath": "staticwebassets\\pdf\\kendo.all.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\css\\lightgallery.min.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\css\\lightgallery.min.css",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\css\\lightgallery.min.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd41d.eot",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd41d.eot",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\fonts\\lgd41d.eot"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.eot",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.eot",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\fonts\\lgd641.eot"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.svg",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.svg",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\fonts\\lgd641.svg"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.ttf",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.ttf",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\fonts\\lgd641.ttf"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.woff",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\fonts\\lgd641.woff",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\fonts\\lgd641.woff"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\loading.gif",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\loading.gif",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\img\\loading.gif"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\video-play.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\video-play.png",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\img\\video-play.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\vimeo-play.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\vimeo-play.png",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\img\\vimeo-play.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\youtube-play.png",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\img\\youtube-play.png",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\img\\youtube-play.png"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\js\\lightgallery-all.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\light-gallery\\js\\lightgallery-all.min.js",
       "PackagePath": "staticwebassets\\plugins\\light-gallery\\js\\lightgallery-all.min.js"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.eot",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.eot",
       "PackagePath": "staticwebassets\\plugins\\summernote\\dist\\font\\summernote4c4d.eot"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.ttf",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.ttf",
       "PackagePath": "staticwebassets\\plugins\\summernote\\dist\\font\\summernote4c4d.ttf"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.woff",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernote4c4d.woff",
       "PackagePath": "staticwebassets\\plugins\\summernote\\dist\\font\\summernote4c4d.woff"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernoted41d.eot",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\font\\summernoted41d.eot",
       "PackagePath": "staticwebassets\\plugins\\summernote\\dist\\font\\summernoted41d.eot"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.css",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.css",
       "PackagePath": "staticwebassets\\plugins\\summernote\\dist\\summernote-bs4.css"
     },
     {
-      "Id": "F:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.min.js",
+      "Id": "D:\\ITU\\M2\\COURS\\Projet .Net\\Clinique\\CWeb\\CWeb\\wwwroot\\plugins\\summernote\\dist\\summernote-bs4.min.js",
       "PackagePath": "staticwebassets\\plugins\\summernote\\dist\\summernote-bs4.min.js"
     },
     {
