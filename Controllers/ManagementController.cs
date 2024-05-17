@@ -386,7 +386,7 @@ namespace CWeb.Controllers
                     personnel.Password = stringcustom.HashString(personnel.Password);
                     _context.Add(personnel);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction(nameof(AllPersonnel));
                 }
                 return View(personnel);
             }
