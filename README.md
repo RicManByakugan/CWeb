@@ -1,7 +1,7 @@
 ## Projet DotNet
 
 1. [Aperçu](#aperçu)
-2. [Fonctionnalités](#fonctionnalités)
+2. [Globalité](#globalité)
     - [Front Office](#front-office)
     - [Back Office](#back-office)
     - [Services](#services)
@@ -17,17 +17,62 @@
 
 CWEB est un système de gestion de clinique conçu pour améliorer l'efficacité des processus administratifs et cliniques. Il offre des interfaces distinctes pour les patients, le personnel d'accueil, les services médicaux et le management de la clinique.
 
-## Fonctionnalités
+## Globalité
 
 ### Front Office
   - SQL Server
   - ADO.net (Accès aux données)
   - MVC, REST API
 
+  - `serveur/` : Ticket pour un patient
+  - `serveur/Patient` : Ticket pour un patient
+  - `serveur/Patient/FileAccueil` : File d'attente pour les patients qui viennent d'arriver
+  - `serveur/Patient/FileService/MATERNITE` : File d'attente pour les patients qui sont déjà accueillis et envoyer vers le service correspondant.
+
 ### Back Office
   - SQL Server
   - Entity Framework
   - Razor Page
+
+  - `serveur/login` : Login administration
+  - `serveur/Accueil/*` : Administration pour le personnel de l'Accueil
+    - `/FileAttente` : Affiche la liste des patients qui n'ont pas encore été accueillis. Le personnel peut appeler un/une patient(e) pour le/la réceptionner
+    - `/ListeReceptionne` : Affiche le/la patient(e) appelé(e) par le personnel dans l'accueil, valide son accueil ou annule la réception
+    - `/Consultation/{Ticket}` : Formulaire à remplir sur les informations du patient
+    - `/Statistique` : Affiche les patients accueillis et le CA de la journée. Le personnel de l'accueil l'exporte à la fin de la journée pour le suivi financier.
+    - `/ServiceJourney` : Affiche les bilans de tous les services sur le nombre de patients envoyés dans la journée
+    - `/PatientRecuJourney` : Affiche la liste des patients qui ont été réceptionnés par le service jusqu'à la fin de la journée.
+    - `/StatistiqueAll` : Affiche les patients accueillis et le CA de toutes les activités.
+    - `/ServiceJourneyAll` : Affiche les bilans de tous les services sur le nombre de patients envoyés sur toutes les activités
+    - `/PatientRecuJourneyAll` : Affiche la liste de tous les patients qui ont été réceptionnés par le service jusqu'à la fin.
+    - `/EditProfile` : Modification du profil du personnel
+    - `/EditProfilePassword` : Modification du mot de passe du personnel
+    - `/Profile` : Affiche le profil du personnel actif
+
+  - `serveur/Service/*` : Administration pour le personnel dans le service
+    - `/FileAttente` : Affiche la liste des patients qui n'ont pas encore été réceptionnés dans le service. Le personnel peut appeler un/une patient(e) pour le/la réceptionner
+    - `/ListeReceptionne` : Affiche le/la patient(e) appelé(e) par le personnel dans le service
+    - `/StatistiqueAll` : Affiche les patients accueillis et le CA de toutes les activités.
+    - `/PatientRecuJourneyAll` : Affiche la liste de tous les patients qui ont été réceptionnés par le service jusqu'à la fin.
+    - `/EditProfile` : Modification du profil du personnel
+    - `/EditProfilePassword` : Modification du mot de passe du personnel
+    - `/Profile` : Affiche le profil du personnel actif
+
+  - `serveur/Management/*` : Administration pour le personnel dans le Management
+    - `/Create` : Ajout d'un nouveau personnel
+    - `/SuivieAccueil` : Voir les activités des trois accueils sur la journée
+    - `/SuivieSevice` : Voir les activités des services sur la journée
+    - `/Details/{idPersonnel}` : Affiche les détails d'un personnel
+    - `/Edit/{idPersonnel}` : Modification d'un personnel
+    - `/AllPersonnel` : Voir tous les personnels
+    - `/AccueilListe` : Voir les personnels de l'accueil
+    - `/ServiceListe` : Voir les personnels de chaque service
+    - `/ManagementListe` : Voir les personnels du management
+    - `/MyListeActivite` : Voir les actions faites par le personnel comme par exemple l'ajout d'un nouveau personnel, la réinitialisation du mot de passe d'un personnel, la suppression d'un personnel, la modification d'un personnel.
+    - `/ListeActivite` : Voir toutes les actions faites par tous les personnels
+    - `/EditProfile` : Modification du profil du personnel
+    - `/EditProfilePassword` : Modification du mot de passe du personnel
+    - `/Profile` : Affiche le profil du personnel actif
 
 ### Services
 
