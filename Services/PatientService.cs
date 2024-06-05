@@ -17,6 +17,44 @@ namespace CWeb.Services
 			_connectionString = configuration.GetConnectionString("CWebDbContext");
 		}
 
+		public async Task<bool> AddPatient(Patient patient)
+		{
+			bool ticketExists = await TicketExists(patient.Ticket);
+			if (ticketExists)
+			{
+				return false;
+			}
+
+			using (var connection = new SqlConnection(_connectionString))
+			{
+				await connection.OpenAsync();
+				using (var command = connection.CreateCommand())
+				{
+					command.CommandText = @"INSERT INTO Patient (Ticket, CreatedDate) VALUES (@Ticket, @CreatedDate)";
+					command.Parameters.AddWithValue("@Ticket", patient.Ticket);
+					command.Parameters.AddWithValue("@CreatedDate", patient.CreatedDate);
+
+					int rowsAffected = await command.ExecuteNonQueryAsync();
+					return rowsAffected > 0;
+				}
+			}
+		}
+
+		private async Task<bool> TicketExists(string ticket)
+		{
+			using (var connection = new SqlConnection(_connectionString))
+			{
+				await connection.OpenAsync();
+				using (var command = connection.CreateCommand())
+				{
+					command.CommandText = "SELECT COUNT(*) FROM Patient WHERE Ticket = @Ticket AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)";
+					command.Parameters.AddWithValue("@Ticket", ticket);
+					int count = (int)await command.ExecuteScalarAsync();
+					return count > 0;
+				}
+			}
+		}
+
 		public IEnumerable<Patient> GetPatients()
 		{
 			var patients = new List<Patient>();

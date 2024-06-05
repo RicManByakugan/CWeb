@@ -20,6 +20,32 @@ namespace CWeb.Controllers
 			_patientService = patientService;
 		}
 
+		[HttpPost("add")]
+		public async Task<ActionResult> AddPatient([FromBody] Patient request)
+		{
+			if (request == null || string.IsNullOrEmpty(request.Ticket))
+			{
+				return BadRequest("Le ticket existe déjà");
+			}
+
+			var patient = new Patient
+			{
+				Ticket = request.Ticket,
+				CreatedDate = DateTime.Now
+			};
+			bool added = await _patientService.AddPatient(patient);
+			if (added)
+			{
+				return Ok("Ticket inserez");
+			}
+			else
+			{
+				return BadRequest("Le ticket existe déjà");
+			}
+		}
+
+
+
 		[HttpGet]
 		public ActionResult<IEnumerable<Patient>> GetPatients()
 		{
