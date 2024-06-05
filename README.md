@@ -6,7 +6,7 @@
     - [API Endpoints](#api-endpoints)
     - [Back Office](#back-office)
     - [Services](#services)
-    - [Accueil](#Accueil)
+    - [Accueil](#Accueil-disponible)
     - [Management](#management)
 3. [Instructions pour les Patients](#instructions-pour-les-patients)
 4. [Instructions pour le Personnel d'Accueil](#instructions-pour-le-personnel-daccueil)
