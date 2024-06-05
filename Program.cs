@@ -21,6 +21,7 @@ builder.Services.AddSession(options =>
 
 
 // Enregistrer ProductService
+builder.Services.AddScoped<PatientService>();
 builder.Services.AddScoped<ProductService>();
 
 var app = builder.Build();
