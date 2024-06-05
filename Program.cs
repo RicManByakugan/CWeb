@@ -1,4 +1,5 @@
 ﻿using CWeb.Data;
+using CWeb.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,6 +18,10 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromSeconds(3600);
     options.Cookie.IsEssential = true;
 });
+
+
+// Enregistrer ProductService
+builder.Services.AddScoped<ProductService>();
 
 var app = builder.Build();
 
