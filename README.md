@@ -1,7 +1,4 @@
-
-# CWEB - Système de Gestion Clinique
-
-## Table des matières
+## Projet DotNet
 
 1. [Aperçu](#aperçu)
 2. [Fonctionnalités](#fonctionnalités)
@@ -14,6 +11,7 @@
 5. [Instructions pour le Personnel d'Accueil](#instructions-pour-le-personnel-daccueil)
 6. [Instructions pour les Services](#instructions-pour-les-services)
 7. [Instructions pour la Gestion](#instructions-pour-la-gestion)
+8. [Guide d'Installation](#guide-dinstallation)
 
 ## Aperçu
 
@@ -22,17 +20,13 @@ CWEB est un système de gestion de clinique conçu pour améliorer l'efficacité
 ## Fonctionnalités
 
 ### Front Office
-
-- **Technologies Utilisées**:
   - SQL Server
-  - Entity Framework (Accès aux données)
+  - ADO.net (Accès aux données)
   - MVC, REST API
 
 ### Back Office
-
-- **Technologies Utilisées**:
-  - Entity Framework
   - SQL Server
+  - Entity Framework
   - Razor Page
 
 ### Services
@@ -45,17 +39,22 @@ Les services médicaux disponibles comprennent :
 5. Bloc opératoire
 6. Dentaire
 
+### Accueil Disponible
+1. Accueil I
+2. Accueil II
+3. Accueil III
+
 ### Management
 
 Les fonctionnalités de gestion permettent de superviser et de gérer le personnel, ainsi que de suivre les activités de l'accueil et des services.
 
 ## API Endpoints
 
-- **POST**: `api/patient/add/` - Ajout Ticket pour un client
-- **GET**: `api/patient/` - Liste des clients en attente en ce jour
-- **GET**: `api/patient/{id}` - Détails d'un patient
-- **GET**: `api/patient/accueil/{accueil}` - Liste des clients en attente dans un accueil spécifique en ce jour (ex: ACCUEIL 1)
-- **GET**: `api/patient/service/{service}` - Liste des clients en attente dans un service spécifique en ce jour (ex: VACCINATION)
+- **POST**: `api/patient/add/` : Ajout Ticket pour un client
+- **GET**: `api/patient/` : Liste des clients en attente en ce jour
+- **GET**: `api/patient/{id}` : Détails d'un patient
+- **GET**: `api/patient/accueil/{accueil}` : Liste des clients en attente dans un accueil spécifique en ce jour (ex: ACCUEIL 1)
+- **GET**: `api/patient/service/{service}` : Liste des clients en attente dans un service spécifique en ce jour (ex: VACCINATION)
 
 ## Instructions pour les Patients
 
@@ -87,10 +86,6 @@ Les fonctionnalités de gestion permettent de superviser et de gérer le personn
 - Modifier le profil.
 - Modifier le mot de passe.
 
-**Accueils Disponibles** :
-1. Accueil I
-2. Accueil II
-3. Accueil III
 
 ## Instructions pour les Services
 
@@ -122,3 +117,68 @@ Les fonctionnalités de gestion permettent de superviser et de gérer le personn
 - Voir le profil, voir le statut en ligne.
 - Modifier le profil.
 - Modifier le mot de passe.
+
+## Guide d'Installation
+
+### Prérequis
+
+1. **SDK .NET Core 8.0.204**
+2. **SQL Server**
+3. **Visual Studio 2019**
+
+### Étapes d'Installation
+
+1. **Cloner le Répertoire**
+
+    ```bash
+    git clone https://github.com/votre-repository/CWEB.git
+    cd CWEB
+    ```
+
+2. **Installer le SDK .NET Core 8.0.204**
+
+    Assurez-vous d'avoir installé le SDK .NET Core 8.0.204. Vous pouvez le télécharger depuis le [site officiel de .NET](https://dotnet.microsoft.com/download/dotnet/8.0).
+
+3. **Configurer SQL Server**
+
+    - Assurez-vous d'avoir SQL Server installé et en cours d'exécution.
+    - Créez une base de données pour l'application.
+
+4. **Configurer les Chaînes de Connexion**
+
+    - Ouvrez le fichier `appsettings.json`.
+    - Configurez la chaîne de connexion pour pointer vers votre instance SQL Server et votre base de données.
+
+    ```json
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=YOUR_SERVER;Database=YOUR_DATABASE;User Id=YOUR_USER;Password=YOUR_PASSWORD;"
+    }
+    ```
+
+5. **Restaurer les Packages NuGet**
+
+    ```bash
+    dotnet restore
+    ```
+
+6. **Appliquer les Migrations de la Base de Données**
+
+    ```bash
+    dotnet ef database update
+    ```
+
+7. **Exécuter l'Application**
+
+    - Ouvrez le projet dans Visual Studio 2019.
+    - Appuyez sur `F5` pour exécuter l'application.
+
+8. **Accéder à l'Application**
+
+    - Une fois l'application en cours d'exécution, vous pouvez y accéder via `http://localhost:5000` ou `https://localhost:5001`.
+
+### Notes Supplémentaires
+
+- Assurez-vous que vos ports SQL Server sont correctement configurés et que votre pare-feu autorise les connexions nécessaires.
+- Si vous rencontrez des problèmes, vérifiez les journaux de l'application pour des détails spécifiques.
+
+---
