@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using CWeb.Services;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CWeb.Controllers
 {
@@ -47,16 +48,16 @@ namespace CWeb.Controllers
 
 
 		[HttpGet]
-		public ActionResult<IEnumerable<Patient>> GetPatients()
+		public async Task<ActionResult<IEnumerable<Patient>>> GetPatients()
 		{
-			return Ok(_patientService.GetPatients());
+			var patients = await _patientService.GetPatients();
+			return Ok(patients);
 		}
 
-		
 		[HttpGet("{id}")]
-		public ActionResult<Patient> GetPatient(int id)
+		public async Task<ActionResult<Patient>> GetPatient(int id)
 		{
-			var patient = _patientService.GetPatient(id);
+			var patient = await _patientService.GetPatient(id);
 			if (patient == null)
 			{
 				return NotFound();
@@ -65,9 +66,9 @@ namespace CWeb.Controllers
 		}
 
 		[HttpGet("accueil/{accueil}")]
-		public ActionResult<IEnumerable<Patient>> GetPatientsByAccueil(string accueil)
+		public async Task<ActionResult<IEnumerable<Patient>>> GetPatientsByAccueil(string accueil)
 		{
-			var patients = _patientService.GetPatientsByAccueil(accueil);
+			var patients = await _patientService.GetPatientsByAccueil(accueil);
 			if (patients == null || !patients.Any())
 			{
 				return NotFound();
@@ -76,9 +77,20 @@ namespace CWeb.Controllers
 		}
 
 		[HttpGet("service/{service}")]
-		public ActionResult<IEnumerable<Patient>> GetPatientsByService(string service)
+		public async Task<ActionResult<IEnumerable<Patient>>> GetPatientsByServiceNotNull(string service)
 		{
-			var patients = _patientService.GetPatientsByService(service);
+			var patients = await _patientService.GetPatientsByServiceNotNull(service);
+			if (patients == null || !patients.Any())
+			{
+				return NotFound();
+			}
+			return Ok(patients);
+		}
+
+		[HttpGet("servicenull/{service}")]
+		public async Task<ActionResult<IEnumerable<Patient>>> GetPatientsByServiceIsNull(string service)
+		{
+			var patients = await _patientService.GetPatientsByServiceIsNull(service);
 			if (patients == null || !patients.Any())
 			{
 				return NotFound();

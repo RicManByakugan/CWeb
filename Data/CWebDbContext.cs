@@ -14,6 +14,5 @@ namespace CWeb.Data
         public DbSet<Patient> Patient { get; set; } = default!;
         public DbSet<Personnel> Personnel { get; set; } = default!;
         public DbSet<Activite> Acitivite { get; set; } = default!;
-        public DbSet<Product> Product { get; set; } = default!;
 	}
 }

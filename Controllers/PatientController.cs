@@ -4,82 +4,85 @@ using CWeb.Tools;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using CWeb.Services;
 
 namespace CWeb.Controllers
 {
-    public class PatientController : Controller
-    {
-        private readonly CWebDbContext _context;
-        private readonly Nombre nombre;
-        
-        public PatientController(CWebDbContext context) {
-            nombre = new Nombre();
-            _context = context;   
-        }
+	public class PatientController : Controller
+	{
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+		private readonly PatientService _patientService;
+		private readonly Nombre nombre;
 
-        [HttpPost]
-        public async Task<IActionResult> Index(Patient patient)
-        {
-            bool Novalidate = true;
-            string Ticket = nombre.GenerateRandomNumber();
-            
-            while (Novalidate)
-            {
-                IEnumerable<Patient> verification = await _context.Patient.Where(m => m.Ticket == Ticket && m.Finition != "OK").ToListAsync();
-                if (verification != null && verification.Any())
-                {
-                    Novalidate = true;
-                }
-                else
-                {
-                    patient.Ticket = Ticket;
-                    patient.CreatedDate = DateTime.Now;
-                    _context.Add(patient);
-                    await _context.SaveChangesAsync();
-                    Novalidate = false;
-                }
-            }
-            string ticketContent = "Votre ticket : " + Ticket;
-            ViewData["message"] = Ticket;
-            return View();
-        }
+		public PatientController(PatientService patientService)
+		{
+			_patientService = patientService;
+			nombre = new Nombre();
+		}
 
+		public IActionResult Index()
+		{
+			return View();
+		}
 
-        public async Task<IActionResult> FileAccueil()
-        {
-            var today = DateTime.Now.Date;
-            var data = new DataFileAccueil
-            {
-                Attente = await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync(),
-                Accueil1 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 1" && m.ResultatConsultation == null && m.CreatedDate.Date == today).ToListAsync(),
-                Accueil2 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 2" && m.ResultatConsultation == null && m.CreatedDate.Date == today).ToListAsync(),
-                Accueil3 = await _context.Patient.Where(m => m.Receptionne == "OK" && m.Accueil == "ACCUEIL 3" && m.ResultatConsultation == null && m.CreatedDate.Date == today).ToListAsync()
-            };
-            var CountFA = await _context.Patient.Where(m => m.Receptionne == null && m.CreatedDate.Date == today).ToListAsync();
-            ViewData["CountFA"] = CountFA.Count;
-            return View(data);
-        }
+		
+		[HttpPost]
+		public async Task<IActionResult> Index(Patient patient)
+		{
+			bool Novalidate = true;
+			string Ticket = nombre.GenerateRandomNumber();
 
-        [Route("Patient/FileService/{serviceName}")]
-        public async Task<IActionResult> FileService(string serviceName)
-        {
-            var today = DateTime.Now.Date;
-            var data = new DataFileAccueil
-            {
-                Attente = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null && m.CreatedDate.Date == today).ToListAsync(),
-                Accueil1 = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == "OK" && m.Finition == null && m.CreatedDate.Date == today).ToListAsync(),
-            };
-            ViewData["service"] = serviceName;
-            var CountFA = await _context.Patient.Where(m => m.Service == serviceName && m.ReceptionneService == null && m.CreatedDate.Date == today).ToListAsync();
-            ViewData["CountFA"] = CountFA.Count;
-            return View(data);
-        }
-    }
+			while (Novalidate)
+			{
+				bool ticketExists = await _patientService.TicketExists(Ticket);
+				if (ticketExists)
+				{
+					Novalidate = true;
+				}
+				else
+				{
+					patient.Ticket = Ticket;
+					patient.CreatedDate = DateTime.Now;
+					bool added = await _patientService.AddPatient(patient);
+					if (added)
+					{
+						Novalidate = false;
+					}
+				}
+			}
+			ViewData["message"] = Ticket;
+			return View();
+		}
 
-    
+		public async Task<IActionResult> FileAccueil()
+		{
+			var today = DateTime.Now.Date;
+			var data = new DataFileAccueil
+			{
+				Attente = await _patientService.GetPatients(),
+				Accueil1 = await _patientService.GetPatientsByAccueil("ACCUEIL 1"),
+				Accueil2 = await _patientService.GetPatientsByAccueil("ACCUEIL 2"),
+				Accueil3 = await _patientService.GetPatientsByAccueil("ACCUEIL 3")
+			};
+			var CountFA = await _patientService.GetPatients();
+			ViewData["CountFA"] = CountFA.Count();
+			return View(data);
+		}
+
+		[Route("Patient/FileService/{serviceName}")]
+		public async Task<IActionResult> FileService(string serviceName)
+		{
+			var today = DateTime.Now.Date;
+			var data = new DataFileAccueil
+			{
+				Attente = await _patientService.GetPatientsByServiceIsNull(serviceName),
+				Accueil1 = await _patientService.GetPatientsByServiceNotNull(serviceName)
+			};
+			ViewData["service"] = serviceName;
+			var CountFA = await _patientService.GetPatientsByServiceIsNull(serviceName);
+			ViewData["CountFA"] = CountFA.Count();
+			return View(data);
+		}
+
+	}
 }

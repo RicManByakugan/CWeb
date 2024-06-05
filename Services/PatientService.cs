@@ -40,7 +40,7 @@ namespace CWeb.Services
 			}
 		}
 
-		private async Task<bool> TicketExists(string ticket)
+		public async Task<bool> TicketExists(string ticket)
 		{
 			using (var connection = new SqlConnection(_connectionString))
 			{
@@ -55,18 +55,18 @@ namespace CWeb.Services
 			}
 		}
 
-		public IEnumerable<Patient> GetPatients()
+		public async Task<IEnumerable<Patient>> GetPatients()
 		{
 			var patients = new List<Patient>();
 
 			using (var connection = new SqlConnection(_connectionString))
 			{
-				connection.Open();
-				using (var command = new SqlCommand("SELECT * FROM Patient WHERE CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
+				await connection.OpenAsync();
+				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Receptionne IS NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
 				{
-					using (var reader = command.ExecuteReader())
+					using (var reader = await command.ExecuteReaderAsync())
 					{
-						while (reader.Read())
+						while (await reader.ReadAsync())
 						{
 							patients.Add(ReadPatient(reader));
 						}
@@ -77,19 +77,19 @@ namespace CWeb.Services
 			return patients;
 		}
 
-		public Patient GetPatient(int id)
+		public async Task<Patient> GetPatient(int id)
 		{
 			Patient patient = null;
 
 			using (var connection = new SqlConnection(_connectionString))
 			{
-				connection.Open();
+				await connection.OpenAsync();
 				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Id = @Id AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
 				{
 					command.Parameters.Add(new SqlParameter("@Id", id));
-					using (var reader = command.ExecuteReader())
+					using (var reader = await command.ExecuteReaderAsync())
 					{
-						if (reader.Read())
+						if (await reader.ReadAsync())
 						{
 							patient = ReadPatient(reader);
 						}
@@ -100,19 +100,19 @@ namespace CWeb.Services
 			return patient;
 		}
 
-		public IEnumerable<Patient> GetPatientsByAccueil(string accueil)
+		public async Task<IEnumerable<Patient>> GetPatientsByAccueil(string accueil)
 		{
 			var patients = new List<Patient>();
 
 			using (var connection = new SqlConnection(_connectionString))
 			{
-				connection.Open();
-				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Accueil = @Accueil AND ResultatConsultation IS NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
+				await connection.OpenAsync();
+				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Accueil = @Accueil AND Receptionne='OK' AND ResultatConsultation IS NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
 				{
 					command.Parameters.Add(new SqlParameter("@Accueil", accueil));
-					using (var reader = command.ExecuteReader())
+					using (var reader = await command.ExecuteReaderAsync())
 					{
-						while (reader.Read())
+						while (await reader.ReadAsync())
 						{
 							patients.Add(ReadPatient(reader));
 						}
@@ -123,19 +123,42 @@ namespace CWeb.Services
 			return patients;
 		}
 
-		public IEnumerable<Patient> GetPatientsByService(string service)
+		public async Task<IEnumerable<Patient>> GetPatientsByServiceNotNull(string service)
 		{
 			var patients = new List<Patient>();
 
 			using (var connection = new SqlConnection(_connectionString))
 			{
-				connection.Open();
-				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Service = @Service AND ResultatConsultation IS NOT NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
+				await connection.OpenAsync();
+				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Service = @Service AND ReceptionneService IS NOT NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
 				{
 					command.Parameters.Add(new SqlParameter("@Service", service));
-					using (var reader = command.ExecuteReader())
+					using (var reader = await command.ExecuteReaderAsync())
 					{
-						while (reader.Read())
+						while (await reader.ReadAsync())
+						{
+							patients.Add(ReadPatient(reader));
+						}
+					}
+				}
+			}
+
+			return patients;
+		}
+
+		public async Task<IEnumerable<Patient>> GetPatientsByServiceIsNull(string service)
+		{
+			var patients = new List<Patient>();
+
+			using (var connection = new SqlConnection(_connectionString))
+			{
+				await connection.OpenAsync();
+				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Service = @Service AND ReceptionneService IS NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
+				{
+					command.Parameters.Add(new SqlParameter("@Service", service));
+					using (var reader = await command.ExecuteReaderAsync())
+					{
+						while (await reader.ReadAsync())
 						{
 							patients.Add(ReadPatient(reader));
 						}
