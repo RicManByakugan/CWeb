@@ -3,15 +3,16 @@
 1. [Aperçu](#aperçu)
 2. [Globalité](#globalité)
     - [Front Office](#front-office)
+    - [API Endpoints](#api-endpoints)
     - [Back Office](#back-office)
     - [Services](#services)
+    - [Accueil](#Accueil)
     - [Management](#management)
-3. [API Endpoints](#api-endpoints)
-4. [Instructions pour les Patients](#instructions-pour-les-patients)
-5. [Instructions pour le Personnel d'Accueil](#instructions-pour-le-personnel-daccueil)
-6. [Instructions pour les Services](#instructions-pour-les-services)
-7. [Instructions pour la Gestion](#instructions-pour-la-gestion)
-8. [Guide d'Installation](#guide-dinstallation)
+3. [Instructions pour les Patients](#instructions-pour-les-patients)
+4. [Instructions pour le Personnel d'Accueil](#instructions-pour-le-personnel-daccueil)
+5. [Instructions pour les Services](#instructions-pour-les-services)
+6. [Instructions pour la Gestion](#instructions-pour-la-gestion)
+7. [Guide d'Installation](#guide-dinstallation)
 
 ## Aperçu
 
@@ -28,6 +29,14 @@ CWEB est un système de gestion de clinique conçu pour améliorer l'efficacité
   - `serveur/Patient` : Ticket pour un patient
   - `serveur/Patient/FileAccueil` : File d'attente pour les patients qui viennent d'arriver
   - `serveur/Patient/FileService/MATERNITE` : File d'attente pour les patients qui sont déjà accueillis et envoyer vers le service correspondant.
+
+### API Endpoints pour le Front Office
+
+- **POST**: `api/patient/add/` : Ajout Ticket pour un client
+- **GET**: `api/patient/` : Liste des clients en attente en ce jour
+- **GET**: `api/patient/{id}` : Détails d'un patient
+- **GET**: `api/patient/accueil/{accueil}` : Liste des clients en attente dans un accueil spécifique en ce jour (ex: ACCUEIL 1)
+- **GET**: `api/patient/service/{service}` : Liste des clients en attente dans un service spécifique en ce jour (ex: VACCINATION)
 
 ### Back Office
   - SQL Server
@@ -85,6 +94,7 @@ Les services médicaux disponibles comprennent :
 6. Dentaire
 
 ### Accueil Disponible
+
 1. Accueil I
 2. Accueil II
 3. Accueil III
@@ -92,14 +102,6 @@ Les services médicaux disponibles comprennent :
 ### Management
 
 Les fonctionnalités de gestion permettent de superviser et de gérer le personnel, ainsi que de suivre les activités de l'accueil et des services.
-
-## API Endpoints
-
-- **POST**: `api/patient/add/` : Ajout Ticket pour un client
-- **GET**: `api/patient/` : Liste des clients en attente en ce jour
-- **GET**: `api/patient/{id}` : Détails d'un patient
-- **GET**: `api/patient/accueil/{accueil}` : Liste des clients en attente dans un accueil spécifique en ce jour (ex: ACCUEIL 1)
-- **GET**: `api/patient/service/{service}` : Liste des clients en attente dans un service spécifique en ce jour (ex: VACCINATION)
 
 ## Instructions pour les Patients
 

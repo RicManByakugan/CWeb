@@ -24,7 +24,6 @@ namespace CWeb.Controllers
 		{
 			return View();
 		}
-
 		
 		[HttpPost]
 		public async Task<IActionResult> Index(Patient patient)
