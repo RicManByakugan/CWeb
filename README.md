@@ -178,7 +178,7 @@ Les fonctionnalités de gestion permettent de superviser et de gérer le personn
 1. **Cloner le Répertoire**
 
     ```bash
-    git clone https://github.com/votre-repository/CWEB.git
+    git clone https://github.com/RicManByakugan/CWeb
     cd CWEB
     ```
 
