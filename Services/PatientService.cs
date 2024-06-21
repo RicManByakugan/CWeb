@@ -130,7 +130,7 @@ namespace CWeb.Services
 			using (var connection = new SqlConnection(_connectionString))
 			{
 				await connection.OpenAsync();
-				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Service = @Service AND ReceptionneService IS NOT NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
+				using (var command = new SqlCommand("SELECT * FROM Patient WHERE Service = @Service AND ReceptionneService='OK' AND Finition IS NULL AND CAST(CreatedDate AS DATE) = CAST(GETDATE() AS DATE)", connection))
 				{
 					command.Parameters.Add(new SqlParameter("@Service", service));
 					using (var reader = await command.ExecuteReaderAsync())
